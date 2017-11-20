@@ -79,7 +79,11 @@ publicVariable "trh_gameStarted";
             
             [] spawn {
                 systemchat format ["%1", trh_extractionPoint];
-                waitUntil { (trh_extractionPoint distance2d trh_treasure) < trh_cfg_extractionRadius };
+                //waitUntil { (trh_extractionPoint distance2d trh_treasure) < trh_cfg_extractionRadius };
+                waitUntil {
+                    _pos = [trh_treasure] call qb_fnc_pickObjGetPos;
+                    (trh_extractionPoint distance2d _pos) < trh_cfg_extractionRadius
+                };
                 _winnerGrp = group (trh_treasure getVariable "pickObj_whoHas");
                 _winners = "";
                 {

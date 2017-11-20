@@ -31,6 +31,7 @@ addons[]=
 	"A3_Sounds_F",
 	"A3_Weapons_F_Acc",
 	"A3_Weapons_F",
+	"A3_Weapons_F_Launchers_RPG32",
 	"A3_Weapons_F_Pistols_Pistol_Heavy_01",
 	"A3_Weapons_F_Items",
 	"A3_Weapons_F_Ammoboxes"
@@ -219,6 +220,15 @@ class Mission
 									ammoLeft=30;
 								};
 							};
+							class secondaryWeapon
+							{
+								name="launch_RPG32_F";
+								class primaryMuzzleMag
+								{
+									name="RPG32_F";
+									ammoLeft=1;
+								};
+							};
 							class handgun
 							{
 								name="hgun_Pistol_heavy_01_F";
@@ -243,7 +253,7 @@ class Mission
 									class Item0
 									{
 										name="30Rnd_65x39_caseless_mag";
-										count=2;
+										count=1;
 										ammoLeft=30;
 									};
 									class Item1
@@ -279,7 +289,7 @@ class Mission
 									class Item1
 									{
 										name="11Rnd_45ACP_Mag";
-										count=2;
+										count=1;
 										ammoLeft=11;
 									};
 									class Item2
@@ -399,6 +409,15 @@ class Mission
 									ammoLeft=30;
 								};
 							};
+							class secondaryWeapon
+							{
+								name="launch_RPG32_F";
+								class primaryMuzzleMag
+								{
+									name="RPG32_F";
+									ammoLeft=1;
+								};
+							};
 							class handgun
 							{
 								name="hgun_Pistol_heavy_01_F";
@@ -486,6 +505,16 @@ class Mission
 							{
 								typeName="B_AssaultPack_mcamo";
 								isBackpack=1;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="RPG32_F";
+										count=1;
+										ammoLeft=1;
+									};
+								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
@@ -4221,20 +4250,19 @@ class Mission
 		class Item29
 		{
 			dataType="Marker";
-			position[]={6853.6587,4.7783203,8226.8418};
+			position[]={7129.3052,105.24609,8972.1055};
 			name="trh_mrk_treasure";
 			type="Empty";
 			id=95;
-			atlOffset=-161.4086;
 		};
 		class Item30
 		{
 			dataType="Marker";
-			position[]={6845.0786,2.0546875,8229.1514};
+			position[]={6856.4409,5.2998047,8263.2432};
 			name="trh_mrk_taor";
 			type="Empty";
 			id=98;
-			atlOffset=-163.99568;
+			atlOffset=-158.29309;
 		};
 		class Item31
 		{

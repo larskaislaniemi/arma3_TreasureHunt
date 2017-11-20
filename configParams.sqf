@@ -3,11 +3,11 @@ trh_cfg_haloSafety = 150;
 trh_cfg_gameStartWaitTime = 60;
 trh_cfg_maxPlayersPerGroup = 3;
 
-trh_cfg_debugLevel = 1;
+trh_cfg_debugLevel = 0;
 
 trh_cfg_treasureItemClass = "Land_Laptop_02_unfolded_F";
 trh_cfg_treasureItemName = "laptop";
-trh_cfg_treasureRadius = 1200;
+trh_cfg_treasureRadius = 2;
 
 trh_cfg_intelItemRadius = 1500; // also civ popu radius 
 trh_cfg_nDistinctIntelInfo = 100;

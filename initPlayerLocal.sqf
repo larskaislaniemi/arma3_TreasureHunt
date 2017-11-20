@@ -2,6 +2,9 @@
 #include "qb\qb_init.sqf";
 
 waitUntil { !isNull player };
+
+player allowDamage false;
+
 waitUntil { !isNil "trh_missionStartTime" };
 
 _myGrp = createGroup resistance;
@@ -11,9 +14,36 @@ _myGrp = createGroup resistance;
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 ["SetPrivateState", [group player, true]] remoteExec ["BIS_fnc_dynamicGroups", 2, false];
 
+player createDiaryRecord ["Diary", ["Instructions", "
+<font size='32'>Treasure Hunt</font><br/>
+<br/>
+<br/>
+
+<font size='18'>Your mission</font><br/>
+- Find the treasure<br/>
+- Take it to the extraction point<br/>
+<br/>
+
+<font size='18'>How to do it</font><br/><br/>
+1 TEAM UP (press U)<br/><br/>
+2 GATHER YOUR GEAR at the supply boxes.<br/><br/>
+3 HALO JUMP IN once the mission starts. Use your mouse menu and choose your location. Area of operations is marked with a blue circle on your map.<br/><br/>
+4 FIND INTEL by talking to the locals and by scanning through the computers you find in the houses.<br/><br/>
+5 FOLLOW THE BEACON. If you are not the lucky one to find the treasure first, follow the beacon emitted by the treasure. Steal it. Note that the beacon is only activated when the treasure is being carried by someone else!<br/><br/>
+6 REACH THE EXTRACTION POINT, once you have got the treasure (if tou haven't got it, prevent anyone having the treasure reaching the extraction point!). The extraction point is marked on the map with a green cross once the treasure is picked up first time by anyone.<br/><br/>
+<br/>
+
+GOOD LUCK!<br/>
+"]];
+
+[] spawn {
+    titleText ["Welcome! See Map -> Briefing for instructions.", "BLACK", -1, true, true];
+    sleep 3;
+    titleFadeOut 2;
+};
+
 /* Allow damage only after game start */
 [] spawn {
-    player allowDamage false;
     
     waitUntil { trh_gameStarted };
     
