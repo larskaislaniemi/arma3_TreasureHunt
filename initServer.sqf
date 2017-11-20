@@ -178,7 +178,7 @@ publicVariable "trh_gameStarted";
                     _vehType = selectRandom trh_cfg_carPool;
                     _finalPos = getPos _roadSeg;
                     _veh = createVehicle [_vehType, _finalPos, [], 3, "NONE"];
-                    _veh setVariable ["BIS_enableRandomization", false];
+                    _veh setVariable ["BIS_enableRandomization", false, true];
                     _veh setDir _direction;
                 };
             };
