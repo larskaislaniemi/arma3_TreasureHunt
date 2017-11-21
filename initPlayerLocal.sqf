@@ -14,6 +14,22 @@ _myGrp = createGroup resistance;
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 ["SetPrivateState", [group player, true]] remoteExec ["BIS_fnc_dynamicGroups", 2, false];
 
+waitUntil { !isNil "trh_treasure" };
+
+
+
+_treasureIcon = format ["%1", ( ConfigFile >> "CfgVehicles" >> typeOf trh_treasure >> "editorPreview" ) call BIS_fnc_GetCfgData ];
+
+player createDiaryRecord ["Diary", ["Treasure", format ["
+<font size='32'>Your treasure</font><br/>
+<br/>
+<br/>
+is a %1. %2
+<br/>
+<br/>
+<font image='%3'></font>
+", trh_cfg_treasureItemName, trh_cfg_treasureItemDescription, _treasureIcon]  ]];
+
 player createDiaryRecord ["Diary", ["Instructions", "
 <font size='32'>Treasure Hunt</font><br/>
 <br/>
@@ -25,7 +41,7 @@ player createDiaryRecord ["Diary", ["Instructions", "
 <br/>
 
 <font size='18'>How to do it</font><br/><br/>
-1 TEAM UP (press U)<br/><br/>
+1 TEAM UP with max. three fighters per group (press U and invite friends; you can also change your group's name here).<br/><br/>
 2 GATHER YOUR GEAR at the supply boxes.<br/><br/>
 3 HALO JUMP IN once the mission starts. Use your mouse menu and choose your location. Area of operations is marked with a blue circle on your map.<br/><br/>
 4 FIND INTEL by talking to the locals and by scanning through the computers you find in the houses.<br/><br/>
@@ -35,6 +51,11 @@ player createDiaryRecord ["Diary", ["Instructions", "
 
 GOOD LUCK!<br/>
 "]];
+
+
+
+
+
 
 [] spawn {
     titleText ["Welcome! See Map -> Briefing for instructions.", "BLACK", -1, true, true];
@@ -57,13 +78,13 @@ GOOD LUCK!<br/>
 /* Show time counter */
 [] spawn {
     waitUntil { trh_missionStartTime - time < 40 };
-    systemchat "Game starts in 40 seconds";
+    hint "Game starts in 40 seconds";
 
     waitUntil { trh_missionStartTime - time < 20 };
-    systemchat "Game starts in 20 seconds";
+    hint "Game starts in 20 seconds";
 
     waitUntil { trh_missionStartTime - time < 10 };
-    systemchat "Game starts in 10 seconds";
+    hint "Game starts in 10 seconds";
 
     waitUntil { trh_missionStartTime - time < 0 };
     ["Default",["START!", "Game started! Use menu to HALO jump."]] call bis_fnc_showNotification;

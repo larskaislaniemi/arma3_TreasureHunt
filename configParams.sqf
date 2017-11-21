@@ -5,9 +5,9 @@ trh_cfg_maxPlayersPerGroup = 3;
 
 trh_cfg_debugLevel = 0;
 
-trh_cfg_treasureItemClass = "Land_Laptop_02_unfolded_F";
-trh_cfg_treasureItemName = "laptop";
-trh_cfg_treasureRadius = 2;
+trh_cfg_treasureItemClass = ""; // will be set dynamically
+trh_cfg_treasureItemName = ""; // will be set dynamically
+trh_cfg_treasureRadius = 1500;
 
 trh_cfg_intelItemRadius = 1500; // also civ popu radius 
 trh_cfg_nDistinctIntelInfo = 100;
@@ -30,6 +30,12 @@ trh_cfg_extractionPointMarkers = [
     "trh_extract_5", 
     "trh_extract_6", 
     "trh_extract_7" 
+];
+
+trh_cfg_treasurePool = [
+    ["Land_OfficeChair_01_F", "office chair", "Very comfortable office chair."],
+    ["Banner_01_NATO_F", "NATO flag banner", "Who wouldn't like to have one?"],
+    ["Land_Sleeping_bag_blue_folded_F", "blue sleeping bag", "Comfy blue sleeping bag."]
 ];
 
 trh_cfg_carPool = [

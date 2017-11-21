@@ -20,6 +20,19 @@ publicVariable "trh_gameStarted";
 
 /* Create treasure */
 [] spawn {
+    _treasureArray = selectRandom trh_cfg_treasurePool;
+    _treasureClass = _treasureArray select 0;
+    _treasureName = _treasureArray select 1;
+    _treasureDescription = _treasureArray select 2;
+    
+    trh_cfg_treasureItemInfo = _treasureArray;
+    trh_cfg_treasureItemClass = _treasureClass;
+    trh_cfg_treasureItemName = _treasureName;
+    trh_cfg_treasureItemDescription = _treasureDescription;
+    publicVariable "trh_cfg_treasureItemClass";
+    publicVariable "trh_cfg_treasureItemName";
+    publicVariable "trh_cfg_treasureItemDescription";
+    
     _pos = ["trh_mrk_treasure", trh_cfg_treasureRadius] call qb_fnc_getPosNearMarker;
     _pos = _pos + [0.0];
     trh_treasure = createVehicle [trh_cfg_treasureItemClass, [0,0,0], [], 2, "CAN_COLLIDE"];
@@ -79,7 +92,6 @@ publicVariable "trh_gameStarted";
             
             [] spawn {
                 systemchat format ["%1", trh_extractionPoint];
-                //waitUntil { (trh_extractionPoint distance2d trh_treasure) < trh_cfg_extractionRadius };
                 waitUntil {
                     _pos = [trh_treasure] call qb_fnc_pickObjGetPos;
                     (trh_extractionPoint distance2d _pos) < trh_cfg_extractionRadius
@@ -178,7 +190,7 @@ publicVariable "trh_gameStarted";
                     _vehType = selectRandom trh_cfg_carPool;
                     _finalPos = getPos _roadSeg;
                     _veh = createVehicle [_vehType, _finalPos, [], 3, "NONE"];
-                    _veh setVariable ["BIS_enableRandomization", false, true];
+                    _veh setVariable ["BIS_enableRandomization", false];
                     _veh setDir _direction;
                 };
             };
