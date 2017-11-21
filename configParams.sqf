@@ -7,7 +7,7 @@ trh_cfg_debugLevel = 0;
 
 trh_cfg_treasureItemClass = ""; // will be set dynamically
 trh_cfg_treasureItemName = ""; // will be set dynamically
-trh_cfg_treasureRadius = 1500;
+trh_cfg_treasureRadius = 1500; //debug//1500;
 
 trh_cfg_intelItemRadius = 1500; // also civ popu radius 
 trh_cfg_nDistinctIntelInfo = 100;

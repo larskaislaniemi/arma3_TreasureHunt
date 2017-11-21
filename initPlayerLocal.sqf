@@ -2,11 +2,12 @@
 #include "qb\qb_init.sqf";
 
 waitUntil { !isNull player };
-
 player allowDamage false;
 
 waitUntil { !isNil "trh_missionStartTime" };
 
+
+/* Player groups */
 _myGrp = createGroup resistance;
 [player] joinSilent grpNull;
 [player] joinSilent _myGrp;
@@ -17,6 +18,7 @@ _myGrp = createGroup resistance;
 waitUntil { !isNil "trh_treasure" };
 
 
+/* Create Diary Records */
 
 _treasureIcon = format ["%1", ( ConfigFile >> "CfgVehicles" >> typeOf trh_treasure >> "editorPreview" ) call BIS_fnc_GetCfgData ];
 
@@ -75,19 +77,34 @@ GOOD LUCK!<br/>
 };
 
 
+/* Let the player know if treasure is already found */
+[] spawn {
+    waitUntil { trh_treasureFound };
+    if (player distance (getMarkerPos "trh_mrk_premission") < 1000) then {
+        ["LongMessage",["Too late!", "The treasure has already been found. Wait for the next round to join the game."]] call bis_fnc_showNotification;
+    };
+};
+
+
 /* Show time counter */
 [] spawn {
     waitUntil { trh_missionStartTime - time < 40 };
-    hint "Game starts in 40 seconds";
+    if (trh_missionStartTime - time > 20) then { hint "Game starts in 40 seconds"; };
 
     waitUntil { trh_missionStartTime - time < 20 };
-    hint "Game starts in 20 seconds";
+    if (trh_missionStartTime - time > 10) then { hint "Game starts in 20 seconds"; };
 
     waitUntil { trh_missionStartTime - time < 10 };
-    hint "Game starts in 10 seconds";
+    if (trh_missionStartTime - time > 0) then { hint "Game starts in 10 seconds"; };
 
     waitUntil { trh_missionStartTime - time < 0 };
-    ["Default",["START!", "Game started! Use menu to HALO jump."]] call bis_fnc_showNotification;
+    if (time - trh_missionStartTime < 20) then { 
+        ["Default",["START!", "Game started! Use menu to HALO jump."]] call bis_fnc_showNotification;
+    } else {
+        if (!trh_treasureFound) then {
+            ["Default",["HURRY!", format ["Game has started %1 seconds ago! Use menu to HALO jump before somebody finds the treasure.", (time - trh_missionStartTime)]]] call bis_fnc_showNotification;
+        };
+    };
     //systemchat "Game started!";
 };
 
@@ -181,7 +198,7 @@ GOOD LUCK!<br/>
            onMapSingleClick '';
            false
         }  
-    }, nil, 5, true, true, "", "(vehicle _this == _this) and ((_this distance (getMarkerPos ""trh_mrk_premission"") < 1000) or (trh_cfg_debugLevel > 0))"];
+    }, nil, 5, true, true, "", "(vehicle _this == _this) and (((_this distance (getMarkerPos ""trh_mrk_premission"") < 1000) and (not trh_treasureFound)) or (trh_cfg_debugLevel > 2))"];
     
     if (trh_cfg_debugLevel == 0) then {
         waitUntil { player getVariable ["trh_player_inGame", false] };
@@ -246,7 +263,6 @@ if (trh_cfg_debugLevel > 0) then {
 };
 
 /* Add action for others to dig my intel once I am dead/unconc. */
-/* TODO: This action is also shown for players themselves if within vehicles! */
 [player, ["Dig for intel", {
     _target = _this select 0;
     _caller = _this select 1;

@@ -6,8 +6,12 @@
 trh_gameStarted = false;
 publicVariable "trh_gameStarted";
 
+trh_treasureFound = false;
+publicVariable "trh_treasureFound";
+
 /* Mission start countdown */
 [] spawn {
+    if (trh_cfg_debugLevel > 0) then { systemchat "INIT START TIME"; };
     trh_missionStartTime = time + trh_cfg_gameStartWaitTime;
     publicVariable "trh_missionStartTime";
 
@@ -16,10 +20,12 @@ publicVariable "trh_gameStarted";
     
     trh_gameStarted = true;
     publicVariable "trh_gameStarted";
+    if (trh_cfg_debugLevel > 0) then { systemchat "START TIME DONE"; };
 };
 
 /* Create treasure */
 [] spawn {
+    if (trh_cfg_debugLevel > 0) then { systemchat "INIT TREASURE"; };
     _treasureArray = selectRandom trh_cfg_treasurePool;
     _treasureClass = _treasureArray select 0;
     _treasureName = _treasureArray select 1;
@@ -33,16 +39,29 @@ publicVariable "trh_gameStarted";
     publicVariable "trh_cfg_treasureItemName";
     publicVariable "trh_cfg_treasureItemDescription";
     
-    _pos = ["trh_mrk_treasure", trh_cfg_treasureRadius] call qb_fnc_getPosNearMarker;
-    _pos = _pos + [0.0];
-    trh_treasure = createVehicle [trh_cfg_treasureItemClass, [0,0,0], [], 2, "CAN_COLLIDE"];
-    trh_treasure setVariable ["BIS_enableRandomization", false];
+    _buildingPosFound = false;
     
+    trh_treasure = createVehicle [trh_cfg_treasureItemClass, [0,0,0], [], 2, "CAN_COLLIDE"];
     publicVariable "trh_treasure";
+    trh_treasure setVariable ["BIS_enableRandomization", false, true];
+    _buildingPos = [0,0,0];
+    
+    while { !_buildingPosFound } do {
+        _pos = ["trh_mrk_treasure", trh_cfg_treasureRadius] call qb_fnc_getPosNearMarker;
 
-    _building = nearestBuilding _pos;
-    _buildingPos = selectRandom ([_building] call BIS_fnc_buildingPositions);
-
+        _building = nearestBuilding _pos;
+        
+        _buildingPositions = [_building] call BIS_fnc_buildingPositions;
+        
+        if (count _buildingPositions <= 0) then {
+            _buildingPosFound = false;
+            if (trh_cfg_debugLevel > 0) then { systemchat "Failed to find a buildingPos, retry..."; };
+        } else {
+            _buildingPos = selectRandom _buildingPositions;
+            _buildingPosFound = true;
+        };
+    };
+    
     trh_treasure setPos _buildingPos;
     [trh_treasure, trh_cfg_treasureItemName] call qb_fnc_pickObjInit;
     
@@ -51,6 +70,8 @@ publicVariable "trh_gameStarted";
         _mrk setMarkerType "hd_destroy";
         _mrk setMarkerColor "ColorRed";
     };
+
+    if (trh_cfg_debugLevel > 0) then { systemchat "TREASURE DONE"; };
     
 };
 
@@ -58,6 +79,7 @@ publicVariable "trh_gameStarted";
 [] spawn {
     waitUntil { !isNil "trh_treasure" };
     waitUntil { !isNull trh_treasure };
+    if (trh_cfg_debugLevel > 0) then { systemchat "INIT BEACON"; };
     
     trh_extractionPointSet = false;
     trh_extractionPoint = [0,0,0];
@@ -66,6 +88,8 @@ publicVariable "trh_gameStarted";
     
     while { true } do {
         waitUntil { trh_treasure getVariable ["pickObj_pickedUp", false] };
+        trh_treasureFound = true;
+        publicVariable "trh_treasureFound";
         _whoHasIt = trh_treasure getVariable "pickObj_whoHas";
         ["enable", [trh_treasure getVariable "pickObj_whoHas", 100, 15, "mrk_treasure"]] call qb_fnc_addBeacon;
         ["Default",["Beacon activated", "Treasure has been moved, beacon activated!"]] remoteExec ["bis_fnc_showNotification", 0, false];
@@ -91,7 +115,28 @@ publicVariable "trh_gameStarted";
             ["Default",["Extraction point", "Treasure extraction point marked on the map"]] remoteExec ["bis_fnc_showNotification", 0, false];
             
             [] spawn {
-                systemchat format ["%1", trh_extractionPoint];
+                _grps = [];
+                waitUntil {
+                    _grps = [];
+                    {
+                        if ({(alive _x) and (_x distance2d (getMarkerPos "trh_mrk_premission") > 1000)} count (units group _x) > 0) then {
+                            _grps pushBackUnique (group _x);
+                        };
+                    } forEach allPlayers;
+                    (count _grps) < 2
+                };
+                if ((count _grps) > 0) then {
+                    _winnergrp = _grps select 0;
+                    ["Default",["WINNER", format ["You are the only group left. Consider yourself a winner."]]] remoteExec ["bis_fnc_showNotification", _winnergrp, false];
+                    sleep 5;
+                    ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, false];
+                    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), false];
+                } else {
+                    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 2, false];
+                };
+            };
+            
+            [] spawn {
                 waitUntil {
                     _pos = [trh_treasure] call qb_fnc_pickObjGetPos;
                     (trh_extractionPoint distance2d _pos) < trh_cfg_extractionRadius
@@ -113,12 +158,15 @@ publicVariable "trh_gameStarted";
         waitUntil { not (trh_treasure getVariable ["pickObj_pickedUp", false]) or _whoHasIt != trh_treasure getVariable "pickObj_whoHas" };
         ["disable", [trh_treasure getVariable "pickObj_whoHas"]] call qb_fnc_addBeacon;
     };
+    if (trh_cfg_debugLevel > 0) then { systemchat "BEACON DONE"; };
+
 };
 
 /* Generate intel about treasure's location */
 [] spawn {
     waitUntil { !isNil "trh_treasure" };
     waitUntil { !isNull trh_treasure };
+    if (trh_cfg_debugLevel > 0) then { systemchat "INIT INTEL INFO"; };
 
     trh_intelPos = [];
     trh_intelUncertainty = [];
@@ -134,11 +182,15 @@ publicVariable "trh_gameStarted";
     publicVariable "trh_intelPos";
     publicVariable "trh_intelUncertainty";
     publicVariable "trh_nIntelPos";
+    
+    if (trh_cfg_debugLevel > 0) then { systemchat "INTEL DONE"; };
 };
 
 
 /*  Create cars. Weighted by city size. */
 [] spawn {
+    if (trh_cfg_debugLevel > 0) then { systemchat "INIT CARS"; };
+
     _pos = getMarkerPos "trh_mrk_taor";
     _radius = trh_cfg_carsRadius;
     _nTotalCars = trh_cfg_numOfCars;
@@ -201,11 +253,14 @@ publicVariable "trh_gameStarted";
             };
         };
     } forEach _towns;
+    
+    if (trh_cfg_debugLevel > 0) then { systemchat "CARS DONE"; };
 };
 
 /* Create intel items, civilians. Weighted by city size. */
 [] spawn {
     waitUntil { !isNil "trh_nIntelPos" };
+    if (trh_cfg_debugLevel > 0) then { systemchat "INIT INTEL STUFF AND CIVS"; };
     
     _pos = getMarkerPos "trh_mrk_taor";
     _radius = trh_cfg_intelItemRadius;
@@ -381,4 +436,5 @@ publicVariable "trh_gameStarted";
             };
         };
     } forEach _towns;
+    if (trh_cfg_debugLevel > 0) then { systemchat "INTEL STUFF AND CIVS DONE"; };
 };
