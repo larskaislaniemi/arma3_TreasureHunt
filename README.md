@@ -1,4 +1,4 @@
-# arma3_TreasureHunt
+# Arma 3 Treasure Hunt
 
 Arma 3 Team Deathmatch mission
 
