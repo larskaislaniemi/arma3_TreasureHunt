@@ -220,14 +220,14 @@ if (trh_cfg_debugLevel > 0) then {
 
         _i = random trh_nIntelPos;
         
-        if ((_ns getVariable "trh_gotIntel") find _i < 0) then {
-            _prevN = _ns getVariable "trh_nGotIntel";
-            _prevI = _ns getVariable "trh_gotIntel";
+        if ((_ns getVariable ["trh_gotIntel", []]) find _i < 0) then {
+            _prevN = _ns getVariable ["trh_nGotIntel", 0];
+            _prevI = _ns getVariable ["trh_gotIntel", []];
             
             _ns setVariable ["trh_nGotIntel", _prevN + 1, true];
             _ns setVariable ["trh_gotIntel", _prevI + [_i], true];
         };
-        systemchat format ["Num of intel: %1", _ns getVariable "trh_nGotIntel"];
+        systemchat format ["Num of intel: %1", _ns getVariable ["trh_nGotIntel", "invalid"]];
     }, [], 4, false, false, "", "true", 3, false, ""];
 };
 
@@ -238,16 +238,20 @@ if (trh_cfg_debugLevel > 0) then {
     while { true } do {
         waitUntil { _prevGroup != (group player) };
         
-        if (!isNull prevGroup) then {
+        if ((!isNull prevGroup) and (!isNull (group player))) then {
             {
                 _newArr = (group player) getVariable ["trh_gotIntel", []];
                 _newArr pushBackUnique _x;
                 (group player) setVariable ["trh_gotIntel", _newArr, true];
                 (group player) setVariable ["trh_nGotIntel", count _newArr, true];
             } forEach (_prevGroup getVariable ["trh_gotIntel", []]);
+        } else {
+            sleep 5;
         };
         
-        _prevGroup = group player;
+        if (!isNull (group player)) then {
+            _prevGroup = group player;
+        };
     };
 };
 
@@ -258,25 +262,29 @@ if (trh_cfg_debugLevel > 0) then {
     
     while { true } do {
         _ns = group player;
-        waitUntil { 
-            (_nDrawnIntel != _ns getVariable ["trh_nGotIntel", 0]) OR (time - _lastDrawn > 20)
-        };
-        _lastDrawn = time;
-        _nDrawnIntel = _ns getVariable ["trh_nGotIntel", 0];
+        if (!isNull _ns) then {
+            waitUntil { 
+                (_nDrawnIntel != _ns getVariable ["trh_nGotIntel", 0]) OR (time - _lastDrawn > 20)
+            };
+            _lastDrawn = time;
+            _nDrawnIntel = _ns getVariable ["trh_nGotIntel", 0];
 
-        for "_i" from 1 to _nDrawnIntel do {
-            _markerName = format ["trh_localmrk_intel_%1", _i];
-            _iIntel = (_ns getVariable "trh_gotIntel") select (_i - 1);
-            _pos = trh_intelPos select _iIntel;
-            _unc = trh_intelUncertainty select _iIntel;
-            
-            //deleteMarkerLocal _markerName;
-            createMarkerLocal [_markerName, _pos];
-            _markerName setMarkerShapeLocal "ELLIPSE";
-            _markerName setMarkerBrushLocal "Border";
-            _markerName setMarkerSizeLocal [_unc, _unc];
-            _markerName setMarkerAlphaLocal 0.7;
-            _markerName setMarkerColorLocal "ColorRed";
+            for "_i" from 1 to _nDrawnIntel do {
+                _markerName = format ["trh_localmrk_intel_%1", _i];
+                _iIntel = (_ns getVariable "trh_gotIntel") select (_i - 1);
+                _pos = trh_intelPos select _iIntel;
+                _unc = trh_intelUncertainty select _iIntel;
+                
+                //deleteMarkerLocal _markerName;
+                createMarkerLocal [_markerName, _pos];
+                _markerName setMarkerShapeLocal "ELLIPSE";
+                _markerName setMarkerBrushLocal "Border";
+                _markerName setMarkerSizeLocal [_unc, _unc];
+                _markerName setMarkerAlphaLocal 0.7;
+                _markerName setMarkerColorLocal "ColorRed";
+            };
+        } else {
+            sleep 5;
         };
     };
 };
@@ -306,7 +314,7 @@ if (trh_cfg_debugLevel > 0) then {
                 _oldIntelCount = _nsme getVariable ["trh_nGotIntel", 0];
                 for "_i" from 0 to (_counti-1) do {
                     _newarr = [] + (_nsme getVariable ["trh_gotIntel", []]);
-                    _newarr pushBackUnique ((_ns getVariable "trh_gotIntel") select _i);
+                    _newarr pushBackUnique ((_ns getVariable ["trh_gotIntel", []]) select _i);
                     _nsme setVariable ["trh_gotIntel", _newarr, true];
                     _nsme setVariable ["trh_nGotIntel", count _newarr, true];
                 };
