@@ -126,11 +126,13 @@ publicVariable "trh_treasureFound";
                     (count _grps) < 2
                 };
                 if ((count _grps) > 0) then {
-                    _winnergrp = _grps select 0;
-                    ["Default",["WINNER", format ["You are the only group left. Consider yourself a winner."]]] remoteExec ["bis_fnc_showNotification", _winnergrp, false];
-                    sleep 5;
-                    ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, false];
-                    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), false];
+                    if (isNil "trh_cfg_disableLonelyWin") then {
+                        _winnergrp = _grps select 0;
+                        ["Default",["WINNER", format ["You are the only group left. Consider yourself a winner."]]] remoteExec ["bis_fnc_showNotification", _winnergrp, false];
+                        sleep 5;
+                        ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, false];
+                        ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), false];
+                    };
                 } else {
                     ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 2, false];
                 };
@@ -242,7 +244,7 @@ publicVariable "trh_treasureFound";
                     _vehType = selectRandom trh_cfg_carPool;
                     _finalPos = getPos _roadSeg;
                     _veh = createVehicle [_vehType, _finalPos, [], 3, "NONE"];
-                    _veh setVariable ["BIS_enableRandomization", false];
+                    _veh setVariable ["BIS_enableRandomization", false, true];
                     _veh setDir _direction;
                 };
             };

@@ -17,16 +17,15 @@ _myGrp = createGroup resistance;
 
 waitUntil { !isNil "trh_treasure" };
 
-
 /* Create Diary Records */
 
 _treasureIcon = format ["%1", ( ConfigFile >> "CfgVehicles" >> typeOf trh_treasure >> "editorPreview" ) call BIS_fnc_GetCfgData ];
 
 player createDiaryRecord ["Diary", ["Treasure", format ["
-<font size='32'>Your treasure</font><br/>
+<font size='32'>The treasure</font><br/>
 <br/>
 <br/>
-is a %1. %2
+is: %1. %2
 <br/>
 <br/>
 <font image='%3'></font>
@@ -232,26 +231,46 @@ if (trh_cfg_debugLevel > 0) then {
     }, [], 4, false, false, "", "true", 3, false, ""];
 };
 
+/* To copy intel over if player's group changes */ /* BUGGY */
+[] spawn {
+    _prevGroup = group player;
+    
+    while { true } do {
+        waitUntil { _prevGroup != (group player) };
+        
+        if (!isNull prevGroup) then {
+            {
+                _newArr = (group player) getVariable ["trh_gotIntel", []];
+                _newArr pushBackUnique _x;
+                (group player) setVariable ["trh_gotIntel", _newArr, true];
+                (group player) setVariable ["trh_nGotIntel", count _newArr, true];
+            } forEach (_prevGroup getVariable ["trh_gotIntel", []]);
+        };
+        
+        _prevGroup = group player;
+    };
+};
 
 /* Loop to refresh gathered intel on map */
 [] spawn {
     _nDrawnIntel = 0;
-    _drawnGroup = group player;
+    _lastDrawn = time;
     
     while { true } do {
         _ns = group player;
         waitUntil { 
-            (_nDrawnIntel != _ns getVariable ["trh_nGotIntel", 0]) OR (_drawnGroup != _ns)
+            (_nDrawnIntel != _ns getVariable ["trh_nGotIntel", 0]) OR (time - _lastDrawn > 20)
         };
-        _drawnGroup = _ns;
+        _lastDrawn = time;
         _nDrawnIntel = _ns getVariable ["trh_nGotIntel", 0];
 
         for "_i" from 1 to _nDrawnIntel do {
-            _markerName = format ["trh_localmrk_intel_%1_%2", _i, _drawnGroup];
+            _markerName = format ["trh_localmrk_intel_%1", _i];
             _iIntel = (_ns getVariable "trh_gotIntel") select (_i - 1);
             _pos = trh_intelPos select _iIntel;
             _unc = trh_intelUncertainty select _iIntel;
             
+            //deleteMarkerLocal _markerName;
             createMarkerLocal [_markerName, _pos];
             _markerName setMarkerShapeLocal "ELLIPSE";
             _markerName setMarkerBrushLocal "Border";
@@ -286,7 +305,7 @@ if (trh_cfg_debugLevel > 0) then {
             if (_counti > 0) then {
                 _oldIntelCount = _nsme getVariable ["trh_nGotIntel", 0];
                 for "_i" from 0 to (_counti-1) do {
-                    _newarr = +(_nsme getVariable ["trh_gotIntel", []]);
+                    _newarr = [] + (_nsme getVariable ["trh_gotIntel", []]);
                     _newarr pushBackUnique ((_ns getVariable "trh_gotIntel") select _i);
                     _nsme setVariable ["trh_gotIntel", _newarr, true];
                     _nsme setVariable ["trh_nGotIntel", count _newarr, true];

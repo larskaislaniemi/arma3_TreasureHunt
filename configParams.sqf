@@ -3,10 +3,10 @@ trh_cfg_haloSafety = 150;
 trh_cfg_gameStartWaitTime = 60;
 trh_cfg_maxPlayersPerGroup = 3;
 
-trh_cfg_debugLevel = 0;
+trh_cfg_debugLevel = 1;
 
-trh_cfg_treasureItemClass = ""; // will be set dynamically
-trh_cfg_treasureItemName = ""; // will be set dynamically
+//trh_cfg_treasureItemClass  will be set dynamically
+//trh_cfg_treasureItemName  will be set dynamically
 trh_cfg_treasureRadius = 1500; //debug//1500;
 
 trh_cfg_intelItemRadius = 1500; // also civ popu radius 
