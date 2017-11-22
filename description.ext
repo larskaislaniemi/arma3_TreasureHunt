@@ -18,7 +18,6 @@ showMap = 1;
 showWatch = 1;
 showSquadRadar = 1;
 disableChannels[] = {
-    {0, true, true}, 
     {1, true, true}, 
     {2, true, true}, 
     {4, true, true}

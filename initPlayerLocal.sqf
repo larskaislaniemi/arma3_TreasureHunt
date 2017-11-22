@@ -47,7 +47,9 @@ player createDiaryRecord ["Diary", ["Instructions", "
 3 HALO JUMP IN once the mission starts. Use your mouse menu and choose your location. Area of operations is marked with a blue circle on your map.<br/><br/>
 4 FIND INTEL by talking to the locals and by scanning through the computers you find in the houses.<br/><br/>
 5 FOLLOW THE BEACON. If you are not the lucky one to find the treasure first, follow the beacon emitted by the treasure. Steal it. Note that the beacon is only activated when the treasure is being carried by someone else!<br/><br/>
-6 REACH THE EXTRACTION POINT, once you have got the treasure (if tou haven't got it, prevent anyone having the treasure reaching the extraction point!). The extraction point is marked on the map with a green cross once the treasure is picked up first time by anyone.<br/><br/>
+6 REACH THE EXTRACTION POINT, once you have got the treasure (if you haven't got it, prevent anyone having the treasure reaching the extraction point!). The extraction point is marked on the map with a green cross once the treasure is picked up first time by anyone.<br/><br/>
+<br/>
+Notes: 1) If you draw on map while on global chat channel, everybody will see your drawings! 2) This server is still very much in beta stage. Any issues and feedback, please see the GitHub page at https://github.com/larskaislaniemi/arma3_TreasureHunt<br/>
 <br/>
 
 GOOD LUCK!<br/>
