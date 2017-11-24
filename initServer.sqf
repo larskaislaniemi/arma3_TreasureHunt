@@ -130,8 +130,8 @@ publicVariable "trh_treasureFound";
                         _winnergrp = _grps select 0;
                         ["Default",["WINNER", format ["You are the only group left. Consider yourself a winner."]]] remoteExec ["bis_fnc_showNotification", _winnergrp, false];
                         sleep 5;
-                        ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, false];
-                        ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), false];
+                        ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, true];
+                        ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), true];
                     };
                 } else {
                     ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 2, false];
@@ -317,7 +317,8 @@ publicVariable "trh_treasureFound";
                 
                 if (_ni < 0) then {
                     //systemchat "Hmm, looks like the hard drive is empty...";
-                    ["Hmm, looks like the hard drive is empty..."] remoteExec ["systemchat", _caller, false];
+                    //["Hmm, looks like the hard drive is empty..."] remoteExec ["systemchat", _caller, false];
+                    [_caller, format ["Found a computer here but looks like the hard drive is formatted..."]] remoteExec ["groupChat", units (group _caller), false];
                 } else {
                     if ((_ns getVariable "trh_gotIntel") find _ni < 0) then {
                         _prevN = _ns getVariable ["trh_nGotIntel", 0];
@@ -328,10 +329,12 @@ publicVariable "trh_treasureFound";
                         
                         _target setVariable ["trh_intelInfoNumber", -1, true];
                         
-                        ["Great, found something interesting here!"] remoteExec ["systemchat", _caller, false];
+                        [_caller, format ["Found a computer with something interesting in it!"]] remoteExec ["groupChat", units (group _caller), false];
+                        //["Great, found something interesting here!"] remoteExec ["systemchat", _caller, false];
                         //systemchat "Great, found something interesting here!";
                     } else {
-                        ["There's nothing here we didn't already know"] remoteExec ["systemchat", _caller, false];
+                        [_caller, format ["Found a computer but there's nothing here we didn't already know"]] remoteExec ["groupChat", units (group _caller), false];
+                        //["There's nothing here we didn't already know"] remoteExec ["systemchat", _caller, false];
                         //systemchat "There's nothing here we didn't already know";
                     };
                 };
@@ -381,7 +384,8 @@ publicVariable "trh_treasureFound";
                 _actId = _this select 2;
                 
                 if (!alive _target) then {
-                    ["Looks like he is very much not alive any more..."] remoteExec ["systemchat", _caller, false];
+                    [_caller, format ["You guys ever try to talk to dead people?"]] remoteExec ["groupChat", units (group _caller), false];
+                    //["Looks like he is very much not alive any more..."] remoteExec ["systemchat", _caller, false];
                     //systemchat "Looks like he is very much not alive any more...";
                 } else {
                     _ns = group _caller;
@@ -396,15 +400,18 @@ publicVariable "trh_treasureFound";
                         _ns setVariable ["trh_nGotIntel", _prevN + 1, true];
                         _ns setVariable ["trh_gotIntel", _prevI + [_ni], true];
                         
-                        ["- [Incomprehensible muttering]   - Thanks, that was useful info!"] remoteExec ["systemchat", _caller, false];
+                        [_caller, format ["Got something from this one civ here!"]] remoteExec ["groupChat", units (group _caller), false];
+                        //["- [Incomprehensible muttering]   - Thanks, that was useful info!"] remoteExec ["systemchat", _caller, false];
                         //systemchat "- [Incomprehensible muttering]   - Thanks, that was useful info!";
                     } else {
-                        ["- [Incomprehensible muttering]   - Thanks but we knew that already."] remoteExec ["systemchat", _caller, false];
+                        [_caller, format ["These civs are just plain useless. Nothing new to tell us."]] remoteExec ["groupChat", units (group _caller), false];
+                        //["- [Incomprehensible muttering]   - Thanks but we knew that already."] remoteExec ["systemchat", _caller, false];
                         //systemchat "- [Incomprehensible muttering]   - Thanks but we knew that already.";
                     };
                     
                     if (_target getVariable ["trh_hasExtraIntel", false]) then {
-                        [_target getVariable "trh_extraIntel"] remoteExec ["systemchat", _caller, false];
+                        [_caller, format ["Also, this civ told me that %1", _target getVariable "trh_extraIntel"]] remoteExec ["groupChat", units (group _caller), false];
+                        //[_target getVariable "trh_extraIntel"] remoteExec ["systemchat", _caller, false];
                     };
                 }; 
             }, [], 5, true, true, "", "true", 10, false, ""]] remoteExec ["addAction", 0, true];
@@ -425,9 +432,9 @@ publicVariable "trh_treasureFound";
                 _minStr = "";
                 if (_min < 10) then { _minStr = format ["0%1", _min]; } else { _minStr = format ["%1", _min]; };
                 if (_mode == "FullAuto") then {
-                    _unit setVariable ["trh_extraIntel", format ["Also, somebody was firing an autorifle nearby, at %1:%2", _hour, _minStr], true];
+                    _unit setVariable ["trh_extraIntel", format ["somebody was firing an autorifle nearby, at %1:%2.", _hour, _minStr], true];
                 } else {
-                    _unit setVariable ["trh_extraIntel", format ["Also, I heard shots fired nearby, at %1:%2", _hour, _minStr], true];
+                    _unit setVariable ["trh_extraIntel", format ["he heard shots fired nearby, at %1:%2", _hour, _minStr], true];
                 }
             }];
             
@@ -439,4 +446,41 @@ publicVariable "trh_treasureFound";
         };
     } forEach _towns;
     if (trh_cfg_debugLevel > 0) then { systemchat "INTEL STUFF AND CIVS DONE"; };
+};
+
+
+/* end mission if everybody is dead */
+[] spawn {
+    waitUntil { !isNil "trh_gameStarted" };
+    waitUntil { trh_gameStarted };
+    waitUntil { { alive _x } count allPlayers < 1 };
+    ["Default",["The End", "Everyone died before accomplishing the mission."]] remoteExec ["bis_fnc_showNotification", 0, false];
+    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
+};
+
+
+/* restart server if no one is exiting the start area for 3 mins */
+[] spawn {
+    waitUntil { !isNil "trh_gameStarted" };
+    waitUntil { trh_gameStarted };
+    
+    _timelimit = 180;
+    _lasttime = time;
+    while { true } do {
+        if ( { _x distance2d (getMarkerPos "trh_mrk_premission") > 1000 } count allPlayers > 0 ) then {
+            // somebody is out there
+            _lasttime = time;
+        } else {
+            if (_lasttime - time > _timelimit) then {
+                ["Default",["The End", "No activity for >3 min"]] remoteExec ["bis_fnc_showNotification", 0, false];
+                ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
+            };
+            
+            if (_lasttime - time > (_timelimit - 30)) then {
+                "Mission will restart if no one HALO jumps within 30 secs" remoteExec ["hint", 0, false];
+            };
+        };
+        
+        sleep 10;
+    };
 };

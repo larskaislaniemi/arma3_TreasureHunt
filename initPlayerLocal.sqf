@@ -1,10 +1,13 @@
 #include "configParams.sqf";
 #include "qb\qb_init.sqf";
 
+EGSpectator_qbmod = compile preprocessFileLineNumbers "EGSpect_mod\EGSpectator.sqf";
+
 waitUntil { !isNull player };
 player allowDamage false;
 
 waitUntil { !isNil "trh_missionStartTime" };
+
 
 
 /* Player groups */
@@ -16,6 +19,8 @@ _myGrp = createGroup resistance;
 ["SetPrivateState", [group player, true]] remoteExec ["BIS_fnc_dynamicGroups", 2, false];
 
 waitUntil { !isNil "trh_treasure" };
+
+
 
 /* Create Diary Records */
 
@@ -302,14 +307,16 @@ if (trh_cfg_debugLevel > 0) then {
     
     if (group _target == group _caller) then {
         if (lifeState _target == "INCAPACITATED") then {
-            [format ["Guys, I emptied %1's pockets of intel but didn't bother to revive him. Haha.", name _target]] remoteExec ["systemchat", _caller, false];
+            [_caller, format ["Guys, I emptied %1's pockets of intel but didn't bother to revive him. Haha.", name _target]] remoteExec ["groupChat", units (group _caller), false];
         } else {
-            ["Let's not leave these documents in his pockets."] remoteExec ["systemchat", _caller, false];
+            [_caller, format ["Emptied %1's pockets of all intel.", name _target]] remoteExec ["groupChat", units (group _caller), false];
+            //["Let's not leave these documents in his pockets."] remoteExec ["systemchat", _caller, false];
         };
         _ns setVariable ["trh_intelPocketsEmptied", true, true];
     } else {
         if (_ns getVariable ["trh_intelPocketsEmptied", false]) then {
-            ["Looks like somebody emptied his pockets already."] remoteExec ["systemchat", _caller, false];
+            [_caller, format ["Found a dead enemy soldier but his pockets are already emptied."]] remoteExec ["groupChat", units (group _caller), false];
+            //["Looks like somebody emptied his pockets already."] remoteExec ["systemchat", _caller, false];
         } else {
             _counti = _ns getVariable ["trh_nGotIntel", 0];
             if (_counti > 0) then {
@@ -322,17 +329,21 @@ if (trh_cfg_debugLevel > 0) then {
                 };
                 _newIntelCount = _nsme getVariable ["trh_nGotIntel", 0];
                 if (_newIntelCount > _oldIntelCount) then {
-                    [format ["Got %1 pieces of new intel here!", _newIntelCount - _oldIntelCount]] remoteExec ["systemchat", _caller, false];
+                    //[format ["Got %1 pieces of new intel here!", _newIntelCount - _oldIntelCount]] remoteExec ["systemchat", _caller, false];
+                    [_caller, format ["Found a dead enemy with %1 pieces of intel with him. Sweet.", _newIntelCount - _oldIntelCount]] remoteExec ["groupChat", units (group _caller), false];
                 } else {
-                    ["He had nothing we didn't already know."] remoteExec ["systemchat", _caller, false];
+                    [_caller, format ["Found a dead enemy soldier but he had nothing we didn't already know."]] remoteExec ["groupChat", units (group _caller), false];
+                    //["He had nothing we didn't already know."] remoteExec ["systemchat", _caller, false];
                 };
             } else {
-                ["His pockets are empty."] remoteExec ["systemchat", _caller, false];
+                [_caller, format ["Found a dead enemy but he seems to got no intel with him."]] remoteExec ["groupChat", units (group _caller), false];
+                //["His pockets are empty."] remoteExec ["systemchat", _caller, false];
             };
             _ns setVariable ["trh_intelPocketsEmptied", true, true];
         };
     };
 }, [], 5, true, true, "", "(vehicle _this == _this) AND (_target != _this) AND (lifeState _target != ""HEALTHY"") AND (lifeState _target != ""INJURED"")", 5, false, ""]] remoteExec ["addAction", 0, true];
+    
     
 /* Refill player's pockets regularly with group's intel. Thus, if incapacited player is looted of intel,
    and then revived, his pockets won't be empty next time somebody tries to loot him. */
@@ -369,3 +380,4 @@ if (trh_cfg_debugLevel > 0) then {
         };
     }, [], 4, false, false, "", "true", 3, false, ""];
 };
+

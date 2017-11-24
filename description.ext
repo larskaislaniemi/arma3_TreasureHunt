@@ -1,8 +1,10 @@
 author = "quubba";
 overviewText = "Be the first to find the treasure.";
 
-respawnDialog = 0;
+respawn = 3;
 respawnOnStart = -1;
+respawnDelay = 9999999;
+//respawnDialog = 0;
 ReviveMode = 1;
 ReviveUnconsciousStateMode = 0;
 ReviveRequiredTrait = 0;
@@ -85,7 +87,7 @@ class CfgNotifications
 
 
 class CfgDifficultyPresets {
-    defaultPreset = Regular;
+    defaultPreset = Custom;
     
     myArmorCoef = 1.0;
     groupArmorCoef = 1.0;
@@ -141,7 +143,7 @@ class CfgDifficultyPresets {
 			vonID = 0;            // VON ID (0 = disabled, 1 = enabled)
 
 			// Misc
-			mapContent = 1;       // Extended map content (0 = disabled, 1 = enabled)
+			mapContent = 0;       // Extended map content (0 = disabled, 1 = enabled)
 			autoReport = 0;       // Automatic reporting (0 = disabled, 1 = enabled)
 			multipleSaves = 0;    // Multiple saves (0 = disabled, 1 = enabled)
 		};
@@ -186,7 +188,7 @@ class CfgDifficultyPresets {
 			vonID = 0;            // VON ID (0 = disabled, 1 = enabled)
 
 			// Misc
-			mapContent = 1;       // Extended map content (0 = disabled, 1 = enabled)
+			mapContent = 0;       // Extended map content (0 = disabled, 1 = enabled)
 			autoReport = 0;       // Automatic reporting (0 = disabled, 1 = enabled)
 			multipleSaves = 0;    // Multiple saves (0 = disabled, 1 = enabled)
 		};
@@ -231,7 +233,7 @@ class CfgDifficultyPresets {
 			vonID = 0;            // VON ID (0 = disabled, 1 = enabled)
 
 			// Misc
-			mapContent = 1;       // Extended map content (0 = disabled, 1 = enabled)
+			mapContent = 0;       // Extended map content (0 = disabled, 1 = enabled)
 			autoReport = 0;       // Automatic reporting (0 = disabled, 1 = enabled)
 			multipleSaves = 0;    // Multiple saves (0 = disabled, 1 = enabled)
 		};
@@ -276,7 +278,7 @@ class CfgDifficultyPresets {
 			vonID = 0;            // VON ID (0 = disabled, 1 = enabled)
 
 			// Misc
-			mapContent = 1;       // Extended map content (0 = disabled, 1 = enabled)
+			mapContent = 0;       // Extended map content (0 = disabled, 1 = enabled)
 			autoReport = 0;       // Automatic reporting (0 = disabled, 1 = enabled)
 			multipleSaves = 0;    // Multiple saves (0 = disabled, 1 = enabled)
 		};
