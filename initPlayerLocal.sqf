@@ -11,6 +11,7 @@ waitUntil { !isNil "trh_missionStartTime" };
 
 
 /* Player groups */
+
 _myGrp = createGroup resistance;
 [player] joinSilent grpNull;
 [player] joinSilent _myGrp;
@@ -50,8 +51,8 @@ player createDiaryRecord ["Diary", ["Instructions", "
 1 TEAM UP with max. three fighters per group (press U and invite friends; you can also change your group's name here).<br/><br/>
 2 GATHER YOUR GEAR at the supply boxes.<br/><br/>
 3 HALO JUMP IN once the mission starts. Use your mouse menu and choose your location. Area of operations is marked with a blue circle on your map.<br/><br/>
-4 FIND INTEL by talking to the locals and by scanning through the computers you find in the houses.<br/><br/>
-5 FOLLOW THE BEACON. If you are not the lucky one to find the treasure first, follow the beacon emitted by the treasure. Steal it. Note that the beacon is only activated when the treasure is being carried by someone else!<br/><br/>
+4 FIND INTEL by talking to the locals and by scanning through the computers you find in the houses. Intel will be marked on your map.<br/><br/>
+5 FOLLOW THE BEACON. If you are not the lucky one to find the treasure first, follow the beacon emitted by the treasure. Steal the treasure. Note that the beacon is only activated when the treasure is being carried by someone else!<br/><br/>
 6 REACH THE EXTRACTION POINT, once you have got the treasure (if you haven't got it, prevent anyone having the treasure reaching the extraction point!). The extraction point is marked on the map with a green cross once the treasure is picked up first time by anyone.<br/><br/>
 <br/>
 Notes: 1) If you draw on map while on global chat channel, everybody will see your drawings! 2) This server is still very much in beta stage. Any issues and feedback, please see the GitHub page at https://github.com/larskaislaniemi/arma3_TreasureHunt<br/>
@@ -94,28 +95,25 @@ GOOD LUCK!<br/>
 
 /* Show time counter */
 [] spawn {
-    waitUntil { trh_missionStartTime - time < 40 };
-    if (trh_missionStartTime - time > 20) then { hint "Game starts in 40 seconds"; };
-
-    waitUntil { trh_missionStartTime - time < 20 };
-    if (trh_missionStartTime - time > 10) then { hint "Game starts in 20 seconds"; };
-
-    waitUntil { trh_missionStartTime - time < 10 };
-    if (trh_missionStartTime - time > 0) then { hint "Game starts in 10 seconds"; };
+    _timeAnns = [40, 20, 10, 0];
+    for "_i" from 0 to (count _timeAnns - 1) do {
+        waitUntil { trh_missionStartTime - time < (_timeAnns select _i) };
+        if (trh_missionStartTime - time > (_timeAnns select (_i+1))) then { hint format ["Game starts in %1 seconds", _timeAnns select _i]; };
+    };
 
     waitUntil { trh_missionStartTime - time < 0 };
     if (time - trh_missionStartTime < 20) then { 
         ["Default",["START!", "Game started! Use menu to HALO jump."]] call bis_fnc_showNotification;
     } else {
         if (!trh_treasureFound) then {
-            ["Default",["HURRY!", format ["Game has started %1 seconds ago! Use menu to HALO jump before somebody finds the treasure.", (time - trh_missionStartTime)]]] call bis_fnc_showNotification;
+            ["Default",["HURRY!", format ["Game has started %1 seconds ago! Use menu to HALO jump.", (time - trh_missionStartTime)]]] call bis_fnc_showNotification;
         };
     };
-    //systemchat "Game started!";
 };
 
 
 /* HALO jump after game start */
+/* HALO jump script modified from MGI_HALO */
 [] spawn {
     fnc_orient = {
         _obj = _this select 0;
@@ -287,7 +285,7 @@ if (trh_cfg_debugLevel > 0) then {
                 _markerName setMarkerShapeLocal "ELLIPSE";
                 _markerName setMarkerBrushLocal "Border";
                 _markerName setMarkerSizeLocal [_unc, _unc];
-                _markerName setMarkerAlphaLocal 0.7;
+                _markerName setMarkerAlphaLocal 1.0;
                 _markerName setMarkerColorLocal "ColorRed";
             };
         } else {
@@ -295,6 +293,7 @@ if (trh_cfg_debugLevel > 0) then {
         };
     };
 };
+
 
 /* Add action for others to dig my intel once I am dead/unconc. */
 [player, ["Dig for intel", {
