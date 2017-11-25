@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=224;
+		nextID=242;
 	};
 	class MarkerIDProvider
 	{
@@ -321,13 +321,13 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={629.53967,29.812422,12287.568};
+				position[]={630.02197,29.812422,12289.324};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
 			};
 			id=94;
 			type="B_supplyCrate_F";
@@ -348,7 +348,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
 						};
 					};
 				};
@@ -662,64 +662,6 @@ class Mission
 		};
 		class Item15
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={644.89948,29.812422,12286.978};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=176;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item16
-		{
 			dataType="Group";
 			side="West";
 			class Entities
@@ -808,7 +750,7 @@ class Mission
 			};
 			id=177;
 		};
-		class Item17
+		class Item16
 		{
 			dataType="Group";
 			side="West";
@@ -898,65 +840,7 @@ class Mission
 			};
 			id=179;
 		};
-		class Item18
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={659.81024,29.812422,12286.978};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=181;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item19
+		class Item17
 		{
 			dataType="Group";
 			side="West";
@@ -1046,7 +930,7 @@ class Mission
 			};
 			id=182;
 		};
-		class Item20
+		class Item18
 		{
 			dataType="Group";
 			side="West";
@@ -1136,65 +1020,7 @@ class Mission
 			};
 			id=189;
 		};
-		class Item21
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={674.12451,29.812422,12287.871};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=191;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item22
+		class Item19
 		{
 			dataType="Group";
 			side="West";
@@ -1284,7 +1110,7 @@ class Mission
 			};
 			id=192;
 		};
-		class Item23
+		class Item20
 		{
 			dataType="Group";
 			side="West";
@@ -1374,65 +1200,7 @@ class Mission
 			};
 			id=194;
 		};
-		class Item24
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={687.84235,29.812422,12286.381};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=196;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item25
+		class Item21
 		{
 			dataType="Group";
 			side="West";
@@ -1522,7 +1290,7 @@ class Mission
 			};
 			id=197;
 		};
-		class Item26
+		class Item22
 		{
 			dataType="Group";
 			side="West";
@@ -1612,65 +1380,7 @@ class Mission
 			};
 			id=199;
 		};
-		class Item27
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={701.85846,29.812422,12287.275};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=201;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item28
+		class Item23
 		{
 			dataType="Group";
 			side="West";
@@ -1760,7 +1470,7 @@ class Mission
 			};
 			id=202;
 		};
-		class Item29
+		class Item24
 		{
 			dataType="Group";
 			side="West";
@@ -1850,65 +1560,7 @@ class Mission
 			};
 			id=204;
 		};
-		class Item30
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={715.87451,29.812422,12285.485};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=206;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item31
+		class Item25
 		{
 			dataType="Group";
 			side="West";
@@ -1998,7 +1650,7 @@ class Mission
 			};
 			id=207;
 		};
-		class Item32
+		class Item26
 		{
 			dataType="Group";
 			side="West";
@@ -2088,65 +1740,7 @@ class Mission
 			};
 			id=209;
 		};
-		class Item33
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={729.29419,29.812422,12284.293};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=211;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item34
+		class Item27
 		{
 			dataType="Group";
 			side="West";
@@ -2236,7 +1830,7 @@ class Mission
 			};
 			id=212;
 		};
-		class Item35
+		class Item28
 		{
 			dataType="Group";
 			side="West";
@@ -2326,65 +1920,7 @@ class Mission
 			};
 			id=214;
 		};
-		class Item36
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={743.60846,29.812422,12285.485};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=216;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item37
+		class Item29
 		{
 			dataType="Group";
 			side="West";
@@ -2474,7 +2010,7 @@ class Mission
 			};
 			id=217;
 		};
-		class Item38
+		class Item30
 		{
 			dataType="Group";
 			side="West";
@@ -2564,65 +2100,7 @@ class Mission
 			};
 			id=219;
 		};
-		class Item39
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={757.32629,29.812422,12284.89};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="[""AmmoboxInit"",[this,true]] call BIS_fnc_arsenal;";
-			};
-			id=221;
-			type="B_supplyCrate_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ammoBox";
-					expression="[_this,_value] call bis_fnc_initAmmoBox;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_MX_SW_F""],[1,2,1]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""30Rnd_45ACP_Mag_SMG_01"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""Chemlight_green"",""NLAW_F"",""Laserbatteries"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F""],[24,6,6,6,6,3,1,2,2,6,3,2,6,6,2,2,2,2]],[[""Laserdesignator"",""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk""],[1,10,2,1]],[[""B_Kitbag_mcamo""],[2]]],false]";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item40
+		class Item31
 		{
 			dataType="Group";
 			side="West";
@@ -2711,6 +2189,528 @@ class Mission
 			{
 			};
 			id=222;
+		};
+		class Item32
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={645.7334,29.812422,12289.161};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=233;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item33
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={659.64478,29.812422,12288.015};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=234;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item34
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={674.04718,29.812422,12289.651};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=235;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item35
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={687.95856,29.812422,12287.851};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=236;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item36
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={701.37897,29.812422,12288.342};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=237;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item37
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={715.12671,29.812422,12286.869};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=238;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item38
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={729.03815,29.812422,12286.542};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=239;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item39
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={743.60413,29.812422,12286.542};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=240;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item40
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={756.36993,29.812422,12286.869};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="0 = [""AmmoboxInit"",[this,false]] spawn BIS_fnc_arsenal;";
+			};
+			id=241;
+			type="B_supplyCrate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""launch_NLAW_F"",""arifle_MX_F"",""arifle_AK12_F"",""arifle_AK12_GL_F"",""arifle_MX_GL_F"",""arifle_MXM_F"",""SMG_02_F"",""SMG_01_F"",""hgun_Pistol_heavy_01_F"",""srifle_GM6_F"",""srifle_LRR_F"",""MineDetector"",""LMG_Mk200_F"",""hgun_Pistol_01_F"",""srifle_DMR_01_F"",""launch_RPG32_F"",""launch_RPG7_F"",""arifle_SPAR_03_snd_F"",""launch_B_Titan_short_F"",""LMG_Zafir_F""],[]],[[""30Rnd_65x39_caseless_mag"",""16Rnd_9x21_Mag"",""20Rnd_762x51_Mag"",""100Rnd_65x39_caseless_mag"",""1Rnd_HE_Grenade_shell"",""3Rnd_HE_Grenade_shell"",""1Rnd_Smoke_Grenade_shell"",""1Rnd_SmokeGreen_Grenade_shell"",""NLAW_F"",""HandGrenade"",""MiniGrenade"",""SmokeShell"",""SmokeShellGreen"",""UGL_FlareWhite_F"",""UGL_FlareGreen_F"",""3Rnd_UGL_FlareWhite_F"",""3Rnd_SmokeBlue_Grenade_shell"",""3Rnd_SmokeGreen_Grenade_shell"",""3Rnd_SmokeOrange_Grenade_shell"",""3Rnd_SmokePurple_Grenade_shell"",""3Rnd_SmokeRed_Grenade_shell"",""3Rnd_Smoke_Grenade_shell"",""3Rnd_SmokeYellow_Grenade_shell"",""30Rnd_65x39_caseless_green_mag_Tracer"",""30Rnd_65x39_caseless_mag_Tracer"",""30Rnd_65x39_caseless_green"",""30Rnd_762x39_Mag_Green_F"",""30Rnd_762x39_Mag_F"",""30Rnd_762x39_Mag_Tracer_Green_F"",""30Rnd_762x39_Mag_Tracer_F"",""16Rnd_9x21_green_Mag"",""16Rnd_9x21_red_Mag"",""16Rnd_9x21_yellow_Mag"",""30Rnd_9x21_Mag"",""30Rnd_9x21_Mag_SMG_02"",""30Rnd_9x21_Green_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Green"",""30Rnd_9x21_Mag_SMG_02_Tracer_Red"",""30Rnd_9x21_Red_Mag"",""30Rnd_9x21_Mag_SMG_02_Tracer_Yellow"",""30Rnd_9x21_Yellow_Mag"",""UGL_FlareCIR_F"",""UGL_FlareRed_F"",""UGL_FlareYellow_F"",""1Rnd_SmokeBlue_Grenade_shell"",""1Rnd_SmokeOrange_Grenade_shell"",""1Rnd_SmokePurple_Grenade_shell"",""1Rnd_SmokeRed_Grenade_shell"",""1Rnd_SmokeYellow_Grenade_shell"",""7Rnd_408_Mag"",""11Rnd_45ACP_Mag"",""6Rnd_45ACP_Cylinder"",""9Rnd_45ACP_Mag"",""5Rnd_127x108_Mag"",""10Rnd_127x54_Mag"",""5Rnd_127x108_APDS_Mag"",""100Rnd_65x39_caseless_mag_Tracer"",""200Rnd_65x39_cased_Box"",""200Rnd_65x39_cased_Box_Tracer"",""150Rnd_762x54_Box"",""150Rnd_762x54_Box_Tracer"",""10Rnd_762x54_Mag"",""10Rnd_9x21_Mag"",""APERSBoundingMine_Range_Mag"",""APERSMine_Range_Mag"",""APERSMineDispenser_Mag"",""APERSTripMine_Wire_Mag"",""ATMine_Range_Mag"",""ClaymoreDirectionalMine_Remote_Mag"",""DemoCharge_Remote_Mag"",""SatchelCharge_Remote_Mag"",""IEDLandBig_Remote_Mag"",""IEDUrbanBig_Remote_Mag"",""SLAMDirectionalMine_Wire_Mag"",""RPG7_F"",""RPG32_HE_F"",""RPG32_F"",""IEDLandSmall_Remote_Mag"",""IEDUrbanSmall_Remote_Mag"",""SmokeShellBlue"",""SmokeShellOrange"",""SmokeShellPurple"",""SmokeShellRed"",""SmokeShellYellow"",""Titan_AP"",""Titan_AT"",""TrainingMine_Mag"",""3Rnd_UGL_FlareGreen_F"",""3Rnd_UGL_FlareCIR_F"",""3Rnd_UGL_FlareRed_F"",""3Rnd_UGL_FlareYellow_F"",""30Rnd_45ACP_Mag_SMG_01"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Green"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Red"",""30Rnd_45ACP_Mag_SMG_01_Tracer_Yellow"",""20Rnd_650x39_Cased_Mag_F"",""I_IR_Grenade""],[]],[[""FirstAidKit"",""acc_flashlight"",""bipod_01_F_blk"",""optic_ACO_grn"",""optic_Aco"",""optic_ACO_grn_smg"",""optic_Aco_smg"",""optic_AMS_snd"",""optic_Arco"",""H_HelmetSpecO_blk"",""H_HelmetSpecO_ghex_F"",""H_HelmetSpecO_ocamo"",""G_Aviator"",""G_Balaclava_blk"",""G_Balaclava_combat"",""G_Balaclava_lowprofile"",""G_Balaclava_oli"",""G_Bandanna_aviator"",""G_Bandanna_beast"",""G_Bandanna_blk"",""H_Bandanna_gry"",""H_Bandanna_blu"",""H_Bandanna_cbr"",""H_Bandanna_khk_hs"",""G_Bandanna_khk"",""H_Bandanna_khk"",""H_Bandanna_mcamo"",""G_Bandanna_oli"",""H_Bandanna_sgg"",""H_Bandanna_sand"",""G_Bandanna_shades"",""G_Bandanna_sport"",""H_Bandanna_surfer"",""H_Bandanna_surfer_blk"",""H_Bandanna_surfer_grn"",""G_Bandanna_tan"",""H_Bandanna_camo"",""U_I_C_Soldier_Bandit_4_F"",""U_I_C_Soldier_Bandit_1_F"",""U_I_C_Soldier_Bandit_2_F"",""U_I_C_Soldier_Bandit_5_F"",""U_I_C_Soldier_Bandit_3_F"",""H_PASGT_basic_blue_F"",""H_PASGT_basic_olive_F"",""H_PASGT_basic_white_F"",""H_Watchcap_blk"",""H_Watchcap_cbr"",""H_Watchcap_camo"",""H_Watchcap_khk"",""H_Beret_blk"",""H_Beret_gen_F"",""H_Beret_02"",""H_Beret_Colonel"",""Binocular"",""bipod_03_F_blk"",""bipod_02_F_blk"",""H_Booniehat_khk_hs"",""H_Booniehat_khk"",""H_Booniehat_mcamo"",""H_Booniehat_oli"",""H_Booniehat_tan"",""H_Booniehat_tna_F"",""H_Booniehat_dgtl"",""H_Cap_grn_BI"",""H_Cap_blk"",""H_Cap_Black_IDAP_F"",""H_Cap_blu"",""H_Cap_blk_CMMG"",""H_Cap_grn"",""H_Cap_blk_ION"",""H_Cap_oli"",""H_Cap_oli_hs"",""H_Cap_Orange_IDAP_F"",""H_Cap_police"",""H_Cap_press"",""H_Cap_red"",""H_Cap_surfer"",""H_Cap_tan"",""H_Cap_khaki_specops_UK"",""H_Cap_usblack"",""H_Cap_tan_specops_US"",""H_Cap_White_IDAP_F"",""H_Cap_blk_Raven"",""H_Cap_brn_SPECOPS"",""V_PlateCarrierGL_blk"",""V_PlateCarrierGL_rgr"",""V_PlateCarrierGL_mtp"",""V_PlateCarrierGL_tna_F"",""V_PlateCarrier1_blk"",""V_PlateCarrier1_rgr"",""V_PlateCarrier1_rgr_noflag_F"",""V_PlateCarrier1_tna_F"",""V_PlateCarrier2_blk"",""V_PlateCarrier2_rgr"",""V_PlateCarrier2_rgr_noflag_F"",""V_PlateCarrier2_tna_F"",""V_PlateCarrierSpec_blk"",""V_PlateCarrierSpec_rgr"",""V_PlateCarrierSpec_mtp"",""V_PlateCarrierSpec_tna_F"",""U_C_Man_casual_2_F"",""U_C_Man_casual_3_F"",""U_C_Man_casual_1_F"",""V_Chestrig_blk"",""V_Chestrig_rgr"",""V_Chestrig_khk"",""V_Chestrig_oli"",""U_B_CombatUniform_mcam"",""U_B_CombatUniform_mcam_tshirt"",""U_I_G_resistanceLeader_F"",""U_B_T_Soldier_F"",""U_B_T_Soldier_AR_F"",""U_I_CombatUniform"",""U_I_OfficerUniform"",""U_I_CombatUniform_shortsleeve"",""G_Combat"",""G_Combat_Goggles_tna_F"",""H_HelmetB"",""H_HelmetB_black"",""H_HelmetB_camo"",""H_HelmetB_desert"",""H_HelmetB_grass"",""H_HelmetB_sand"",""H_HelmetB_snakeskin"",""H_HelmetB_tna_F"",""U_C_Poloshirt_blue"",""U_C_Poloshirt_burgundy"",""U_C_Poloshirt_redwhite"",""U_C_Poloshirt_salmon"",""U_C_Poloshirt_stripped"",""U_C_Poloshirt_tricolour"",""O_NVGoggles_ghex_F"",""O_NVGoggles_hex_F"",""O_NVGoggles_urb_F"",""ItemCompass"",""U_Competitor"",""U_C_ConstructionCoverall_Black_F"",""U_C_ConstructionCoverall_Blue_F"",""U_C_ConstructionCoverall_Red_F"",""U_C_ConstructionCoverall_Vrana_F"",""H_HelmetCrew_O_ghex_F"",""H_HelmetCrew_I"",""H_HelmetCrew_O"",""H_HelmetCrew_B"",""U_B_CTRG_1"",""U_B_CTRG_3"",""U_B_CTRG_2"",""V_PlateCarrierL_CTRG"",""V_PlateCarrierH_CTRG"",""U_B_CTRG_Soldier_F"",""U_B_CTRG_Soldier_3_F"",""U_B_CTRG_Soldier_2_F"",""U_B_CTRG_Soldier_urb_1_F"",""U_B_CTRG_Soldier_urb_3_F"",""U_B_CTRG_Soldier_urb_2_F"",""V_DeckCrew_blue_F"",""V_DeckCrew_brown_F"",""V_DeckCrew_green_F"",""V_DeckCrew_red_F"",""V_DeckCrew_violet_F"",""V_DeckCrew_white_F"",""V_DeckCrew_yellow_F"",""H_HelmetLeaderO_ghex_F"",""H_HelmetLeaderO_ocamo"",""H_HelmetLeaderO_oucamo"",""G_Diving"",""G_I_Diving"",""G_O_Diving"",""G_B_Diving"",""optic_DMS"",""H_EarProtectors_black_F"",""H_EarProtectors_orange_F"",""H_EarProtectors_red_F"",""H_EarProtectors_white_F"",""H_EarProtectors_yellow_F"",""H_HelmetSpecB"",""H_HelmetSpecB_blk"",""H_HelmetSpecB_paint2"",""H_HelmetSpecB_paint1"",""H_HelmetSpecB_sand"",""H_HelmetSpecB_snakeskin"",""H_HelmetB_Enh_tna_F"",""V_EOD_blue_F"",""V_EOD_IDAP_blue_F"",""V_EOD_coyote_F"",""V_EOD_olive_F"",""optic_ERCO_snd_F"",""U_O_T_Soldier_F"",""U_O_CombatUniform_ocamo"",""U_O_CombatUniform_oucamo"",""acc_flashlight_smg_01"",""V_PlateCarrierIAGL_dgtl"",""V_PlateCarrierIAGL_oli"",""V_PlateCarrierIA1_dgtl"",""V_PlateCarrierIA2_dgtl"",""U_B_GEN_Commander_F"",""U_B_GEN_Soldier_F"",""V_TacVest_gen_F"",""U_O_T_Sniper_F"",""U_B_T_Sniper_F"",""U_I_GhillieSuit"",""U_O_GhillieSuit"",""U_B_GhillieSuit"",""ItemGPS"",""U_BG_Guerrilla_6_1"",""U_BG_Guerilla1_1"",""U_BG_Guerilla1_2_F"",""U_BG_Guerilla2_2"",""U_BG_Guerilla2_1"",""U_BG_Guerilla2_3"",""U_BG_Guerilla3_1"",""U_BG_leader"",""H_Construction_basic_black_F"",""H_Construction_earprot_black_F"",""H_Construction_headset_black_F"",""H_Construction_basic_orange_F"",""H_Construction_earprot_orange_F"",""H_Construction_headset_orange_F"",""H_Construction_basic_red_F"",""H_Construction_earprot_red_F"",""H_Construction_headset_red_F"",""H_Construction_basic_vrana_F"",""H_Construction_earprot_vrana_F"",""H_Construction_headset_vrana_F"",""H_Construction_basic_white_F"",""H_Construction_earprot_white_F"",""H_Construction_headset_white_F"",""H_Construction_basic_yellow_F"",""H_Construction_earprot_yellow_F"",""H_Construction_headset_yellow_F"",""H_Hat_blue"",""H_Hat_brown"",""H_Hat_camo"",""H_Hat_checker"",""H_Hat_grey"",""H_Hat_tan"",""H_HeadBandage_clean_F"",""H_HeadBandage_stained_F"",""H_HeadBandage_bloody_F"",""H_HeadSet_black_F"",""H_HeadSet_orange_F"",""H_HeadSet_red_F"",""H_HeadSet_white_F"",""H_HeadSet_yellow_F"",""H_CrewHelmetHeli_I"",""H_CrewHelmetHeli_O"",""H_CrewHelmetHeli_B"",""H_PilotHelmetHeli_I"",""H_PilotHelmetHeli_O"",""H_PilotHelmetHeli_B"",""U_C_HunterBody_grn"",""V_Plain_crystal_F"",""V_Plain_medical_F"",""acc_pointer_IR"",""U_OrestesBody"",""U_C_Journalist"",""optic_KHS_tan"",""G_Lady_Blue"",""V_HarnessOGL_brn"",""V_HarnessOGL_ghex_F"",""V_HarnessOGL_gry"",""V_HarnessO_brn"",""V_HarnessO_ghex_F"",""V_HarnessO_gry"",""V_LegStrapBag_black_F"",""V_LegStrapBag_coyote_F"",""V_LegStrapBag_olive_F"",""H_HelmetB_light"",""H_HelmetB_light_black"",""H_HelmetB_light_desert"",""H_HelmetB_light_grass"",""H_HelmetB_light_sand"",""H_HelmetB_light_snakeskin"",""H_HelmetB_Light_tna_F"",""G_Lowprofile"",""optic_LRPS"",""ItemMap"",""H_Cap_marshal"",""U_Marshal"",""U_C_Mechanic_01_F"",""Medikit"",""H_MilCap_blue"",""H_MilCap_gen_F"",""H_MilCap_ghex_F"",""H_MilCap_gry"",""H_MilCap_ocamo"",""H_MilCap_mcamo"",""H_MilCap_tna_F"",""H_MilCap_dgtl"",""optic_Holosight"",""H_HelmetIA"",""optic_SOS"",""optic_MRCO"",""optic_MRD"",""V_Pocketed_black_F"",""V_Pocketed_coyote_F"",""V_Pocketed_olive_F"",""None"",""NVGoggles_OPFOR"",""NVGoggles"",""NVGoggles_INDEP"",""NVGoggles_tna_F"",""optic_NVS"",""U_O_T_Officer_F"",""U_O_OfficerUniform_ocamo"",""U_C_Paramedic_01_F"",""U_I_C_Soldier_Para_2_F"",""U_I_C_Soldier_Para_3_F"",""U_I_C_Soldier_Para_5_F"",""U_I_C_Soldier_Para_4_F"",""U_I_C_Soldier_Para_1_F"",""optic_PGO7_blk_F"",""U_I_pilotCoveralls"",""U_O_PilotCoveralls"",""U_B_PilotCoveralls"",""H_PilotHelmetFighter_I"",""H_PilotHelmetFighter_O"",""H_PilotHelmetFighter_B"",""acc_flashlight_pistol"",""H_PASGT_basic_blue_press_F"",""H_PASGT_neckprot_blue_press_F"",""H_HelmetO_ghex_F"",""H_HelmetO_ocamo"",""H_HelmetO_oucamo"",""H_RacingHelmet_1_black_F"",""H_RacingHelmet_1_blue_F"",""H_RacingHelmet_2_F"",""H_RacingHelmet_1_F"",""H_RacingHelmet_1_green_F"",""H_RacingHelmet_1_orange_F"",""H_RacingHelmet_1_red_F"",""H_RacingHelmet_3_F"",""H_RacingHelmet_4_F"",""H_RacingHelmet_1_white_F"",""H_RacingHelmet_1_yellow_F"",""ItemRadio"",""Rangefinder"",""V_Rangemaster_belt"",""H_Cap_headphones"",""U_Rangemaster"",""V_TacVestIR_blk"",""optic_Hamr"",""V_RebreatherIA"",""V_RebreatherIR"",""V_RebreatherB"",""U_O_SpecopsUniform_ocamo"",""U_B_CombatUniform_mcam_vest"",""U_B_T_Soldier_SL_F"",""G_Respirator_blue_F"",""G_Respirator_white_F"",""G_Respirator_yellow_F"",""H_Hat_Safari_olive_F"",""H_Hat_Safari_sand_F"",""G_EyeProtectors_F"",""G_EyeProtectors_Earpiece_F"",""V_Safety_blue_F"",""V_Safety_orange_F"",""V_Safety_yellow_F"",""G_Shades_Black"",""G_Shades_Blue"",""G_Shades_Green"",""G_Shades_Red"",""H_Shemag_olive"",""H_Shemag_olive_hs"",""H_ShemagOpen_tan"",""H_ShemagOpen_khk"",""H_Helmet_Skate"",""V_BandollierB_blk"",""V_BandollierB_cbr"",""V_BandollierB_ghex_F"",""V_BandollierB_rgr"",""V_BandollierB_khk"",""V_BandollierB_oli"",""H_HelmetO_ViperSP_ghex_F"",""H_HelmetO_ViperSP_hex_F"",""U_O_V_Soldier_Viper_F"",""U_O_V_Soldier_Viper_hex_F"",""G_Spectacles"",""U_C_man_sport_1_F"",""U_C_man_sport_3_F"",""U_C_man_sport_2_F"",""G_Sport_Red"",""G_Sport_Blackyellow"",""G_Sport_BlackWhite"",""G_Sport_Checkered"",""G_Sport_Blackred"",""G_Sport_Greenblack"",""G_Squares_Tinted"",""G_Squares"",""G_Balaclava_TI_blk_F"",""G_Balaclava_TI_G_blk_F"",""G_Balaclava_TI_tna_F"",""G_Balaclava_TI_G_tna_F"",""H_HelmetB_TI_tna_F"",""H_StrawHat"",""H_StrawHat_dark"",""U_C_Man_casual_6_F"",""U_C_Man_casual_4_F"",""U_C_Man_casual_5_F"",""U_B_survival_uniform"",""U_I_C_Soldier_Camo_F"",""V_TacChestrig_cbr_F"",""V_TacChestrig_grn_F"",""V_TacChestrig_oli_F"",""G_Tactical_Clear"",""G_Tactical_Black"",""V_TacVest_blk"",""V_TacVest_brn"",""V_TacVest_camo"",""V_TacVest_khk"",""V_TacVest_oli"",""V_TacVest_blk_POLICE"",""V_I_G_resistanceLeader_F"",""G_Spectacles_Tinted"",""ToolKit"",""I_UavTerminal"",""V_PlateCarrier_Kerry"",""V_Press_F"",""G_Goggles_VR"",""ItemWatch"",""U_I_Wetsuit"",""U_O_Wetsuit"",""U_B_Wetsuit"",""G_WirelessEarpiece_F"",""H_WirelessEarpiece_F"",""U_C_WorkerCoveralls"",""U_C_Poor_1"",""U_I_G_Story_Protagonist_F"",""U_B_CombatUniform_mcam_worn""],[]],[[""B_Kitbag_mcamo"",""B_AssaultPack_blk"",""B_AssaultPack_cbr"",""B_AssaultPack_dgtl"",""B_AssaultPack_rgr"",""B_AssaultPack_ocamo"",""B_AssaultPack_khk"",""B_AssaultPack_mcamo"",""B_AssaultPack_sgg"",""B_AssaultPack_tna_F"",""B_Bergen_dgtl_F"",""B_Bergen_hex_F"",""B_Bergen_mcamo_F"",""B_Bergen_tna_F"",""B_Respawn_Sleeping_bag_blue_F"",""B_Respawn_Sleeping_bag_brown_F"",""B_Respawn_TentDome_F"",""B_Patrol_Respawn_bag_F"",""B_Respawn_Sleeping_bag_F"",""B_Respawn_TentA_F"",""B_Carryall_cbr"",""B_Carryall_ghex_F"",""B_Carryall_ocamo"",""B_Carryall_khk"",""B_Carryall_mcamo"",""B_Carryall_oli"",""B_Carryall_oucamo"",""I_GMG_01_A_weapon_F"",""I_HMG_01_A_weapon_F"",""I_HMG_01_high_weapon_F"",""I_HMG_01_weapon_F"",""I_GMG_01_high_weapon_F"",""I_GMG_01_weapon_F"",""B_FieldPack_blk"",""B_FieldPack_cbr"",""B_FieldPack_ghex_F"",""B_FieldPack_ocamo"",""B_FieldPack_khk"",""B_FieldPack_oli"",""B_FieldPack_oucamo"",""I_Mortar_01_support_F"",""I_Mortar_01_weapon_F"",""I_HMG_01_support_high_F"",""I_HMG_01_support_F"",""B_Kitbag_cbr"",""B_Kitbag_rgr"",""B_Kitbag_sgg"",""B_LegStrapBag_black_F"",""B_LegStrapBag_coyote_F"",""B_LegStrapBag_olive_F"",""B_Messenger_Black_F"",""B_Messenger_Coyote_F"",""B_Messenger_Gray_F"",""B_Messenger_Olive_F"",""B_Messenger_IDAP_F"",""I_AA_01_weapon_F"",""I_AT_01_weapon_F"",""B_Parachute"",""B_TacticalPack_blk"",""B_TacticalPack_rgr"",""B_TacticalPack_ocamo"",""B_TacticalPack_mcamo"",""B_TacticalPack_oli"",""I_UAV_06_backpack_F"",""I_UAV_06_medical_backpack_F"",""I_UAV_01_backpack_F"",""C_UAV_06_backpack_F"",""C_UAV_06_medical_backpack_F"",""B_AssaultPack_Kerry"",""B_ViperHarness_blk_F"",""B_ViperHarness_ghex_F"",""B_ViperHarness_hex_F"",""B_ViperHarness_khk_F"",""B_ViperHarness_oli_F"",""B_ViperLightHarness_blk_F"",""B_ViperLightHarness_ghex_F"",""B_ViperLightHarness_hex_F"",""B_ViperLightHarness_khk_F"",""B_ViperLightHarness_oli_F""],[]]],true]";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 };
