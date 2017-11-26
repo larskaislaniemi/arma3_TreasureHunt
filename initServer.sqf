@@ -114,6 +114,7 @@ publicVariable "trh_treasureFound";
             
             ["Default",["Extraction point", "Treasure extraction point marked on the map"]] remoteExec ["bis_fnc_showNotification", 0, false];
             
+            /* Test if treasure finders is the only group left (thus they win) */
             [] spawn {
                 _grps = [];
                 waitUntil {
@@ -128,6 +129,11 @@ publicVariable "trh_treasureFound";
                 if ((count _grps) > 0) then {
                     if (isNil "trh_cfg_disableLonelyWin") then {
                         _winnergrp = _grps select 0;
+                        _winners = "";
+                        {
+                            _winners = _winners + "  " + (name _x);
+                        } forEach (units _winnerGrp);
+                        ["Default",["The end", format ["Winners are: %1", _winners]]] remoteExec ["bis_fnc_showNotification", allPlayers - (units _winnerGrp), false];
                         ["Default",["WINNER", format ["You are the only group left. Consider yourself a winner."]]] remoteExec ["bis_fnc_showNotification", _winnergrp, false];
                         sleep 5;
                         ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, true];
@@ -138,6 +144,7 @@ publicVariable "trh_treasureFound";
                 };
             };
             
+            /* Test if treasure has been taken to the extraction point => winners */
             [] spawn {
                 waitUntil {
                     _pos = [trh_treasure] call qb_fnc_pickObjGetPos;
@@ -471,16 +478,16 @@ publicVariable "trh_treasureFound";
             // somebody is out there
             _lasttime = time;
         } else {
-            if (_lasttime - time > _timelimit) then {
+            if (time - _lasttime > _timelimit) then {
                 ["Default",["The End", "No activity for >3 min"]] remoteExec ["bis_fnc_showNotification", 0, false];
                 ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
             };
             
-            if (_lasttime - time > (_timelimit - 30)) then {
+            if (time - _lasttime > (_timelimit - 30)) then {
                 "Mission will restart if no one HALO jumps within 30 secs" remoteExec ["hint", 0, false];
             };
         };
         
-        sleep 10;
+        sleep 5;
     };
 };

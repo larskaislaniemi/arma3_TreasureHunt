@@ -9,7 +9,6 @@ player allowDamage false;
 waitUntil { !isNil "trh_missionStartTime" };
 
 
-
 /* Player groups */
 
 _myGrp = createGroup resistance;
@@ -380,3 +379,47 @@ if (trh_cfg_debugLevel > 0) then {
     }, [], 4, false, false, "", "true", 3, false, ""];
 };
 
+
+/* Update group members locations on map */
+[] spawn {
+    _prevMembers = [];
+    _groupChanged = true;
+    _mrkrs = [];
+    while { alive player } do {
+        if (_groupChanged) then {
+            {
+                deleteMarkerLocal (_x select 1);
+            } forEach _mrkrs;
+            _mrkrs = [];
+            
+            _prevMembers = units group player;
+
+            {
+                _name = format ["%1", name _x];
+                _mrk = createMarkerLocal [format ["mrk_%1", _name], _x];
+                _mrk setMarkerColorLocal "ColorGreen";
+                _mrk setMarkerTextLocal _name;
+                _mrk setMarkerTypeLocal "mil_dot";
+                _mrkrs pushBack [_x, _mrk];
+            } forEach _prevMembers;
+            
+            _groupChanged = false;        
+        } else {
+            _curMembers = units group player;
+            if (_curMembers isEqualTo _prevMembers) then {
+                {
+                    _pos = getPos (_x select 0);
+                    (_x select 1) setMarkerPosLocal [_pos select 0, _pos select 1];
+                } forEach _mrkrs;
+                sleep 1;
+            } else {
+                _groupChanged = true;
+                _prevMembers = units (group player);
+            };
+        };
+    };
+    {
+        deleteMarkerLocal (_x select 1);
+    } forEach _mrkrs;
+    _mrkrs = [];
+};
