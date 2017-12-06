@@ -21,6 +21,7 @@ trh_cfg_carsRadius = 2000;
 trh_cfg_carsOutOfCityCoef = 4.0;
 
 trh_cfg_extractionRadius = 50;
+trh_cfg_persistentBeacon = true;
 
 trh_cfg_extractionPointMarkers = [
     "trh_extract_1", 

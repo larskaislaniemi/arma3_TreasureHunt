@@ -88,11 +88,19 @@ publicVariable "trh_treasureFound";
     
     while { true } do {
         waitUntil { trh_treasure getVariable ["pickObj_pickedUp", false] };
+        if (trh_cfg_persistentBeacon) then {
+            if (!trh_treasureFound) then {
+                ["Default",["Beacon activated", "Treasure has been moved, beacon activated!"]] remoteExec ["bis_fnc_showNotification", 0, false];
+            } else {
+                ["Default",["Beacon activated", "Treasure has been moved!"]] remoteExec ["bis_fnc_showNotification", 0, false];
+            };
+        } else {
+            ["Default",["Beacon activated", "Treasure has been moved, beacon activated!"]] remoteExec ["bis_fnc_showNotification", 0, false];
+        };
         trh_treasureFound = true;
         publicVariable "trh_treasureFound";
         _whoHasIt = trh_treasure getVariable "pickObj_whoHas";
         ["enable", [trh_treasure getVariable "pickObj_whoHas", 100, 15, "mrk_treasure"]] call qb_fnc_addBeacon;
-        ["Default",["Beacon activated", "Treasure has been moved, beacon activated!"]] remoteExec ["bis_fnc_showNotification", 0, false];
         
         if (!trh_extractionPointSet) then {
             trh_extractionPointMarker = selectRandom trh_cfg_extractionPointMarkers;
@@ -166,6 +174,11 @@ publicVariable "trh_treasureFound";
         
         waitUntil { not (trh_treasure getVariable ["pickObj_pickedUp", false]) or _whoHasIt != trh_treasure getVariable "pickObj_whoHas" };
         ["disable", [trh_treasure getVariable "pickObj_whoHas"]] call qb_fnc_addBeacon;
+        
+        if (trh_cfg_persistentBeacon) then {
+            ["enable", [trh_treasure, 100, 15, "mrk_treasure"]] call qb_fnc_addBeacon;
+            waitUntil { trh_treasure getVariable ["pickObj_pickedUp", false] };
+        };
     };
     if (trh_cfg_debugLevel > 0) then { systemchat "BEACON DONE"; };
 
