@@ -423,3 +423,11 @@ if (trh_cfg_debugLevel > 0) then {
     } forEach _mrkrs;
     _mrkrs = [];
 };
+
+/* Force rating to zero */
+[] spawn {
+    while { true } do {
+        waitUntil { rating player != 0 };
+        player addRating (-1.0)*(rating player);
+    };
+};
