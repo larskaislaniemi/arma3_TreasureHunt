@@ -486,14 +486,18 @@ publicVariable "trh_treasureFound";
     
     _timelimit = 180;
     _lasttime = time;
+    scopeName "mainSpawn";
     while { true } do {
         if ( { _x distance2d (getMarkerPos "trh_mrk_premission") > 1000 } count allPlayers > 0 ) then {
             // somebody is out there
             _lasttime = time;
         } else {
             if (time - _lasttime > _timelimit) then {
+            
                 ["Default",["The End", "No activity for >3 min"]] remoteExec ["bis_fnc_showNotification", 0, false];
+                [] remoteExec ["forceEnd", 0, false];
                 ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
+                breakTo "mainSpawn";
             };
             
             if (time - _lasttime > (_timelimit - 30)) then {
@@ -502,5 +506,26 @@ publicVariable "trh_treasureFound";
         };
         
         sleep 5;
+    };
+};
+
+/* remove any user markers on global and side chat maps */
+[] spawn {
+    private ["_allMarkers"];
+    while { true } do {
+        {
+            private ["_mrkType"];
+            _mrkType = toArray _x;
+            _mrkType resize 15;
+            if (toString _mrkType == "_USER_DEFINED #") then {
+                private ["_strArr"];
+                _strArr = _x splitString "/";
+                _channelId = parseNumber (_strArr select 2);
+                if (_channelId != 3) then {
+                    deleteMarker _x;
+                };
+            };
+        } forEach allMapMarkers;
+        sleep 1;
     };
 };

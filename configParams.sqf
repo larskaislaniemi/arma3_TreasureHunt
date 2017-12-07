@@ -1,13 +1,13 @@
 trh_cfg_haloElev = 3000;
 trh_cfg_haloSafety = 150;
-trh_cfg_gameStartWaitTime = 10;
+trh_cfg_gameStartWaitTime = 60;
 trh_cfg_maxPlayersPerGroup = 3;
 
 trh_cfg_debugLevel = 0;
 
 //trh_cfg_treasureItemClass  will be set dynamically
 //trh_cfg_treasureItemName  will be set dynamically
-trh_cfg_treasureRadius = 1500; //debug//1500;
+trh_cfg_treasureRadius = 1500; 
 
 trh_cfg_intelItemRadius = 1500; // also civ popu radius 
 trh_cfg_nDistinctIntelInfo = 100;
@@ -44,20 +44,34 @@ trh_cfg_carPool = [
     "C_Offroad_02_unarmed_F",
     "C_Offroad_01_F",
     "C_Quadbike_01_F",
+    "C_Van_01_fuel_F",
+    "C_Van_01_transport_F",
     "C_Van_02_medevac_F",
     "C_Van_02_transport_F",
-    "C_Truck_02_transport_F"
+    "C_Truck_02_transport_F",
+    "I_MRAP_03_F",
+    "B_MRAP_01_F"
 ];
 
 trh_cfg_civPool = [
+    "C_IDAP_Man_AidWorker_01_F",
+    "C_IDAP_Man_AidWorker_02_F",
+    "C_IDAP_Man_AidWorker_03_F",
+    "C_IDAP_Man_AidWorker_05_F",
+    "C_IDAP_Man_AidWorker_06_F",
     "C_man_p_beggar_F",
     "C_Man_casual_1_F",
     "C_Man_casual_2_F",
     "C_Man_casual_3_F",
+    "C_Man_Fisherman_01_F",
     "C_Man_polo_1_F",
     "C_Man_polo_2_F",
     "C_Man_polo_3_F",
     "C_Man_polo_4_F",
     "C_Man_polo_5_F",
-    "C_Man_polo_6_F"
+    "C_Man_polo_6_F",
+    "C_man_shorts_1_F",
+    "C_Story_Mechanic_01_F",
+    "C_Nikos_aged",
+    "C_Orestes"
 ];

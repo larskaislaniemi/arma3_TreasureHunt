@@ -45,16 +45,17 @@ player createDiaryRecord ["Diary", ["Instructions", "
 - Find the treasure<br/>
 - Take it to the extraction point<br/>
 <br/>
-
+Check Map - Briefing - Treasure to find out what your treasure looks like.<br/>
+<br/>
 <font size='18'>How to do it</font><br/><br/>
 1 TEAM UP with max. three fighters per group (press U and invite friends; you can also change your group's name here).<br/><br/>
 2 GATHER YOUR GEAR at the supply boxes.<br/><br/>
 3 HALO JUMP IN once the mission starts. Use your mouse menu and choose your location. Area of operations is marked with a blue circle on your map.<br/><br/>
-4 FIND INTEL by talking to the locals and by scanning through the computers you find in the houses. Intel will be marked on your map.<br/><br/>
-5 FOLLOW THE BEACON. If you are not the lucky one to find the treasure first, follow the beacon emitted by the treasure. Steal the treasure. Note that the beacon is only activated when the treasure is being carried by someone else!<br/><br/>
+4 FIND INTEL by talking to the locals and by scanning through the computers you find in the houses. Intel you find will be marked on your map.<br/><br/>
+5 FOLLOW THE BEACON. If you are not the lucky one to find the treasure first, follow the beacon emitted by the treasure to find whoever is carrying it...<br/><br/>
 6 REACH THE EXTRACTION POINT, once you have got the treasure (if you haven't got it, prevent anyone having the treasure reaching the extraction point!). The extraction point is marked on the map with a green cross once the treasure is picked up first time by anyone.<br/><br/>
 <br/>
-Notes: 1) If you draw on map while on global chat channel, everybody will see your drawings! 2) This server is still very much in beta stage. Any issues and feedback, please see the GitHub page at https://github.com/larskaislaniemi/arma3_TreasureHunt<br/>
+Note: This server is still very much in beta stage. Any issues and feedback, please see the GitHub page at https://github.com/larskaislaniemi/arma3_TreasureHunt<br/>
 <br/>
 
 GOOD LUCK!<br/>
