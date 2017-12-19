@@ -8,9 +8,11 @@
         waitUntil { {alive _x} count _allowedUnits < 1 };
         ["Terminate"] call EGSpectator_qbmod;
     };
-    ["Default",["All Dead!", "Your whole group is dead."]] call bis_fnc_showNotification;
-    sleep 2;
-    ["end1",false,true,true,true] remoteExec ["BIS_fnc_endMission", player, true];
+    if (!trh_gameEnded) then {
+        ["Default",["All Dead!", "Your whole group is dead."]] call bis_fnc_showNotification;
+        sleep 2;
+        ["end1",false,true,true,true] remoteExec ["BIS_fnc_endMission", player, true];
+    };
 };
 
 

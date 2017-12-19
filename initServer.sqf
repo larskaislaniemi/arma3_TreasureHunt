@@ -6,8 +6,14 @@
 trh_gameStarted = false;
 publicVariable "trh_gameStarted";
 
+trh_gameEnded = false;
+publicVariable "trh_gameEnded";
+
 trh_treasureFound = false;
 publicVariable "trh_treasureFound";
+
+trh_treasurePlaced = false;
+publicVariable "trh_treasurePlaced";
 
 /* Mission start countdown */
 [] spawn {
@@ -17,6 +23,7 @@ publicVariable "trh_treasureFound";
 
     waitUntil { time >= trh_missionStartTime };
     waitUntil { !isNil "trh_treasure" };
+    waitUntil { trh_treasurePlaced };
     
     trh_gameStarted = true;
     publicVariable "trh_gameStarted";
@@ -71,14 +78,17 @@ publicVariable "trh_treasureFound";
         _mrk setMarkerColor "ColorRed";
     };
 
+    trh_treasurePlaced = true;
+    publicVariable "trh_treasurePlaced";
+
     if (trh_cfg_debugLevel > 0) then { systemchat "TREASURE DONE"; };
     
 };
 
+
 /* Treasure beacon AND winner test */
 [] spawn {
-    waitUntil { !isNil "trh_treasure" };
-    waitUntil { !isNull trh_treasure };
+    waitUntil { trh_gameStarted };
     if (trh_cfg_debugLevel > 0) then { systemchat "INIT BEACON"; };
     
     trh_extractionPointSet = false;
@@ -141,14 +151,24 @@ publicVariable "trh_treasureFound";
                         {
                             _winners = _winners + "  " + (name _x);
                         } forEach (units _winnerGrp);
-                        ["Default",["The end", format ["Winners are: %1", _winners]]] remoteExec ["bis_fnc_showNotification", allPlayers - (units _winnerGrp), false];
-                        ["Default",["WINNER", format ["You are the only group left. Consider yourself a winner."]]] remoteExec ["bis_fnc_showNotification", _winnergrp, false];
-                        sleep 5;
-                        ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, true];
-                        ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), true];
+                        
+                        if (trh_gameStarted and !trh_gameEnded) then {
+                            trh_gameEnded = true;
+                            publicVariable "trh_gameEnded";
+                            
+                            ["Default",["The end", format ["Winners are: %1", _winners]]] remoteExec ["bis_fnc_showNotification", allPlayers - (units _winnerGrp), false];
+                            ["Default",["WINNER", format ["You are the only group left. Consider yourself a winner."]]] remoteExec ["bis_fnc_showNotification", _winnergrp, false];
+                            sleep 5;
+                            ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", _winnerGrp, true];
+                            ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), true];
+                        };
                     };
                 } else {
-                    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 2, false];
+                    if (trh_gameStarted and !trh_gameEnded) then {
+                        trh_gameEnded = true;
+                        publicVariable "trh_gameEnded";
+                        ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 2, false];
+                    };
                 };
             };
             
@@ -158,17 +178,22 @@ publicVariable "trh_treasureFound";
                     _pos = [trh_treasure] call qb_fnc_pickObjGetPos;
                     (trh_extractionPoint distance2d _pos) < trh_cfg_extractionRadius
                 };
-                _winnerGrp = group (trh_treasure getVariable "pickObj_whoHas");
-                _winners = "";
-                {
-                    _winners = _winners + "  " + (name _x);
-                } forEach (units _winnerGrp);
-                ["Default",["WINNER", format ["Winners are: %1", _winners]]] remoteExec ["bis_fnc_showNotification", 0, false];
-                sleep 10;
-                
-                ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", (units _winnerGrp), false];
-                ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), false];
-                //["end3",false,true,true,true] remoteExec ["BIS_fnc_endMission", 2, false];
+                if (trh_gameStarted and !trh_gameEnded) then {
+                    trh_gameEnded = true;
+                    publicVariable "trh_gameEnded";
+
+                    _winnerGrp = group (trh_treasure getVariable "pickObj_whoHas");
+                    _winners = "";
+                    {
+                        _winners = _winners + "  " + (name _x);
+                    } forEach (units _winnerGrp);
+                    ["Default",["WINNER", format ["Winners are: %1", _winners]]] remoteExec ["bis_fnc_showNotification", 0, false];
+                    sleep 10;
+                    
+                    ["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission", (units _winnerGrp), false];
+                    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", allPlayers - (units _winnerGrp), false];
+                    //["end3",false,true,true,true] remoteExec ["BIS_fnc_endMission", 2, false];
+                };
             };
         };
         
@@ -474,8 +499,13 @@ publicVariable "trh_treasureFound";
     waitUntil { !isNil "trh_gameStarted" };
     waitUntil { trh_gameStarted };
     waitUntil { { alive _x } count allPlayers < 1 };
-    ["Default",["The End", "Everyone died before accomplishing the mission."]] remoteExec ["bis_fnc_showNotification", 0, false];
-    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
+    if (!trh_gameEnded) then {
+        trh_gameEnded = true;
+        publicVariable "trh_gameEnded";
+        ["Default",["The End", "Everyone died before accomplishing the mission."]] remoteExec ["bis_fnc_showNotification", 0, false];
+        sleep 2;
+        ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
+    };
 };
 
 
@@ -493,11 +523,14 @@ publicVariable "trh_treasureFound";
             _lasttime = time;
         } else {
             if (time - _lasttime > _timelimit) then {
-            
-                ["Default",["The End", "No activity for >3 min"]] remoteExec ["bis_fnc_showNotification", 0, false];
-                [] remoteExec ["forceEnd", 0, false];
-                ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
-                breakTo "mainSpawn";
+                if (trh_gameStarted and !trh_gameEnded) then {
+                    trh_gameEnded = true;
+                    publicVariable "trh_gameEnded";
+                    ["Default",["The End", "No activity for >3 min"]] remoteExec ["bis_fnc_showNotification", 0, false];
+                    [] remoteExec ["forceEnd", 0, false];
+                    ["end2",false,true,true,true] remoteExec ["BIS_fnc_endMission", 0, false];
+                    breakTo "mainSpawn";
+                };
             };
             
             if (time - _lasttime > (_timelimit - 30)) then {

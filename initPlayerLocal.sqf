@@ -66,7 +66,7 @@ GOOD LUCK!<br/>
 
 
 
-[] spawn {
+[] call {
     titleText ["Welcome! See Map -> Briefing for instructions.", "BLACK", -1, true, true];
     sleep 3;
     titleFadeOut 2;
@@ -74,7 +74,6 @@ GOOD LUCK!<br/>
 
 /* Allow damage only after game start */
 [] spawn {
-    
     waitUntil { trh_gameStarted };
     
     waitUntil { player distance (getMarkerPos "trh_mrk_premission") > 2000 };
@@ -93,6 +92,13 @@ GOOD LUCK!<br/>
 };
 
 
+/* Reset gathered intel to zero at start */
+if (player == leader group player) then {
+    (group player) setVariable ["trh_nGotIntel", 0, true];
+    (group player) setVariable ["trh_gotIntel", [], true];
+};
+
+
 /* Show time counter */
 [] spawn {
     _timeAnns = [40, 20, 10, 0];
@@ -102,7 +108,8 @@ GOOD LUCK!<br/>
     };
 
     waitUntil { trh_missionStartTime - time < 0 };
-    if (time - trh_missionStartTime < 20) then { 
+    if (!trh_gameStarted and (time - trh_missionStartTime < 20)) then { 
+        waitUntil { trh_gameStarted };
         ["Default",["START!", "Game started! Use menu to HALO jump."]] call bis_fnc_showNotification;
     } else {
         if (!trh_treasureFound) then {
@@ -129,7 +136,7 @@ GOOD LUCK!<br/>
         ]
     };
          
-    waitUntil { trh_gameStarted };
+    waitUntil { !isNil "trh_gameStarted" };
 
     /* Halo jump (thanks to MGI_HALO script!) */
     _haloActionId = player addAction ["<t color='#ff2222'>HALO jump</t>", {
@@ -202,19 +209,12 @@ GOOD LUCK!<br/>
            onMapSingleClick '';
            false
         }  
-    }, nil, 5, true, true, "", "(vehicle _this == _this) and (((_this distance (getMarkerPos ""trh_mrk_premission"") < 1000) and (not trh_treasureFound)) or (trh_cfg_debugLevel > 2))"];
+    }, nil, 5, true, true, "", "trh_gameStarted and (vehicle _this == _this) and (((_this distance (getMarkerPos ""trh_mrk_premission"") < 1000) and (not trh_treasureFound)) or (trh_cfg_debugLevel > 2))"];
     
     if (trh_cfg_debugLevel == 0) then {
         waitUntil { player getVariable ["trh_player_inGame", false] };
         player removeAction _haloActionId;
     };
-};
-
-
-/* Reset gathered intel to zero at start */
-if (player == leader group player) then {
-    (group player) setVariable ["trh_nGotIntel", 0, true];
-    (group player) setVariable ["trh_gotIntel", [], true];
 };
 
 

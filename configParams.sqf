@@ -1,4 +1,4 @@
-trh_cfg_haloElev = 3000;
+trh_cfg_haloElev = 2000;
 trh_cfg_haloSafety = 150;
 trh_cfg_gameStartWaitTime = 60;
 trh_cfg_maxPlayersPerGroup = 3;
