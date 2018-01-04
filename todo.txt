@@ -1,0 +1,17 @@
+TODO
+
+ - Score count
+ - test on dedicated
+
+More info about other players:
+ - how many groups left?
+ - how many kills I have?
+ - messages about kills?
+
+ - Remove all suppressors from arsenals DONE, TESTED
+
+ - treasure dropped when getting in to vehicle    FIXED, TESTED
+	- graphical bug on clients: locally seems to float in the air sometimes
+
+Mission end?
+ - mission time too large and treasure not moved since long time (?)

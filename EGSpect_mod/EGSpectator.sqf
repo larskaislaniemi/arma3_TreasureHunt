@@ -18,6 +18,8 @@
     This is a copy of the internal routine bis_fnc_EGSpectator. Additional
     3rd parameter has been added to whitelist units, in addition to side whitelists.
 */
+VAR_WHITELISTED_UNITS = "egspect_qbmod_whitelisted_units"; // TODO : move somewhere else...
+
 // Do not execute from within 3DEN
 if (count (supportInfo "n:is3DEN") > 0 && { is3DEN }) exitWith {};
 

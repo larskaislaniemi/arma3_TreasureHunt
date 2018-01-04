@@ -1,45 +1,36 @@
-trh_cfg_haloElev = 2000;
-trh_cfg_haloSafety = 150;
-trh_cfg_gameStartWaitTime = 60;
-trh_cfg_maxPlayersPerGroup = 3;
+ 
+trh2_cfg_debugLevel = "Debug" call BIS_fnc_getParamValue;
+trh2_cfg_numOfCivs = "NumOfCivs" call BIS_fnc_getParamValue;
+trh2_cfg_numOfIntelItems = "NumOfIntelItems" call BIS_fnc_getParamValue;
+trh2_cfg_numOfCars = "NumOfCars" call BIS_fnc_getParamValue;
+trh2_cfg_viewDistance = "ViewDistance" call BIS_fnc_getParamValue;
 
-trh_cfg_debugLevel = 0;
+trh2_cfg_carsRadius = 2000;
+trh2_cfg_carsOutOfCityCoef = 3.0;
 
-//trh_cfg_treasureItemClass  will be set dynamically
-//trh_cfg_treasureItemName  will be set dynamically
-trh_cfg_treasureRadius = 1500; 
-
-trh_cfg_intelItemRadius = 1500; // also civ popu radius 
-trh_cfg_nDistinctIntelInfo = 100;
-trh_cfg_intelInfoMinimumUncertainty = 200;
-trh_cfg_intelInfoRandomUncertainty = 300;
-
-trh_cfg_numOfCivs = 100;
-trh_cfg_numOfIntelItems = 150;
-trh_cfg_numOfCars = 40;
-trh_cfg_carsRadius = 2000;
-trh_cfg_carsOutOfCityCoef = 4.0;
-
-trh_cfg_extractionRadius = 50;
-trh_cfg_persistentBeacon = true;
-
-trh_cfg_extractionPointMarkers = [
-    "trh_extract_1", 
-    "trh_extract_2", 
-    "trh_extract_3", 
-    "trh_extract_4", 
-    "trh_extract_5", 
-    "trh_extract_6", 
-    "trh_extract_7" 
+trh2_cfg_intelInfoRandomUncertainty = 200;
+trh2_cfg_intelInfoMinimumUncertainty = 200;
+trh2_cfg_safeZoneRadius = 1500;
+trh2_cfg_safeZoneSpawnRadius = 30;
+trh2_cfg_waitStartTime = 30;
+trh2_cfg_haloSafety = 150;
+trh2_cfg_haloElev = 1000;
+trh2_cfg_treasurePool = [
+    ["Land_Sleeping_bag_blue_folded_F", "blue sleeping bag", "Comfy blue sleeping bag."],
+    ["Land_Microwave_01_F", "microwave oven", "(850 watts!)"],
+    ["Land_WaterCooler_01_new_F", "water cooler", "How cool is that!"]
 ];
-
-trh_cfg_treasurePool = [
-    ["Land_OfficeChair_01_F", "office chair", "Very comfortable office chair."],
-    ["Banner_01_NATO_F", "NATO flag banner", "Who wouldn't like to have one?"],
-    ["Land_Sleeping_bag_blue_folded_F", "blue sleeping bag", "Comfy blue sleeping bag."]
+trh2_cfg_treasureRadius = 1300;
+trh2_cfg_intelItemRadius = 1500;
+trh2_cfg_extractionPointMarkers = [
+    "trh2_extract_1", 
+    "trh2_extract_2", 
+    "trh2_extract_3"
 ];
-
-trh_cfg_carPool = [
+trh2_cfg_extractionRadius = 50;
+trh2_cfg_maxPlayersPerGroup = 3;
+trh2_cfg_nDistinctIntelInfo = 100;
+trh2_cfg_carPool = [
     "C_Hatchback_01_F",
     "C_Offroad_02_unarmed_F",
     "C_Offroad_01_F",
@@ -52,8 +43,8 @@ trh_cfg_carPool = [
     "I_MRAP_03_F",
     "B_MRAP_01_F"
 ];
-
-trh_cfg_civPool = [
+trh2_cfg_civPercInside = 0.3;
+trh2_cfg_civPool = [
     "C_IDAP_Man_AidWorker_01_F",
     "C_IDAP_Man_AidWorker_02_F",
     "C_IDAP_Man_AidWorker_03_F",
@@ -75,3 +66,4 @@ trh_cfg_civPool = [
     "C_Nikos_aged",
     "C_Orestes"
 ];
+trh2_cfg_debug = trh2_cfg_debugLevel;

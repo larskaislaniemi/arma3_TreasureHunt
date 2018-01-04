@@ -17,7 +17,7 @@ Arma 3 Team Deathmatch mission
 5. FOLLOW THE BEACON. If you are not the lucky one to find the treasure first, follow the beacon emitted by the treasure. Steal the treasure. Note that the beacon is only activated when the treasure is being carried by someone else!
 6. REACH THE EXTRACTION POINT, once you have got the treasure (if you haven't got it, prevent anyone having the treasure reaching the extraction point!). The extraction point is marked on the map with a green cross once the treasure is picked up first time by anyone.
 
-Notes: 1) If you draw on map while on global chat channel, everybody will see your drawings! 2) This server is still very much in beta stage. Any issues and feedback, please see the GitHub page at https://github.com/larskaislaniemi/arma3_TreasureHunt
+Notes: This server is still very much in beta stage. Any issues and feedback, please see the GitHub page at https://github.com/larskaislaniemi/arma3_TreasureHunt
 
 GOOD LUCK!
 
@@ -32,6 +32,11 @@ Allowed addons: [Enhanced Movement](http://www.armaholic.com/page.php?id=30547) 
 If you want to run the mission on your own server, you will need these script libraries:
 
 - [qb_fnc_arma3](https://github.com/larskaislaniemi/qb_fnc_arma3)
-- MGI_HALO jump script by Pierre MGI [http://www.armaholic.com/page.php?id=30547](http://www.armaholic.com/page.php?id=30547)
+
+## Acknowledgments
+
+The mission includes MGI_HALO jump script by Pierre MGI 
+[http://www.armaholic.com/page.php?id=30547](http://www.armaholic.com/page.php?id=30547)
+
 
 
